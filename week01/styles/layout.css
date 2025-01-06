@@ -3,15 +3,21 @@ header{
     color: white;
     padding: 10px;
     height: 120px;
+    position: relative;
 }
 
 nav{
+    margin: 0 auto;
+    display: block;
     background-color: black;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
 }
 
 ul{
     margin: 0 auto;
-    padding: 0;
     display: flex;
     /* justify-content: center; */
 }

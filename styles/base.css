@@ -106,7 +106,7 @@ main{
 }
 
 .profile{
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 .profile p{
@@ -131,9 +131,46 @@ main{
     border-radius: 8px;
 }
 
+.location {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.location p{
+    margin: 15px;
+}
+
+.location-image-container{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    margin: 10px;
+}
+
+.location-image-container img {
+    margin: 10px;
+    width: 100%;
+}
+
+.location-image-container figcaption {
+    font-family: "Times new roman";
+    font-style: italic;
+}
+
 footer{
-    background-color: #2e2e2e;
-    color: white;
+    /* display: flex;
+    flex-direction: column;
+    place-items: center; */
+    background-color: #032d47;
     padding: 10px;
     height: 120px;
+}
+
+footer p {
+    text-align: center;
+    color: white;
+}
+
+#currentyear {
+    color: white;
 }

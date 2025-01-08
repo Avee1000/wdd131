@@ -152,7 +152,7 @@ main{
     width: 100%;
 }
 
-.location-image-container figcaption {
+.location-image-container .figcaption {
     font-family: "Times new roman";
     font-style: italic;
 }

@@ -68,7 +68,7 @@ footer p {
     header {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr auto ;
+        grid-template-rows: 80px auto ;
         height: auto;
     }
 
@@ -76,6 +76,7 @@ footer p {
         grid-column: 1/2;
         grid-row: 1/2;
         align-self: center;
+        height: auto;
     }
 
     header h1, #menu {

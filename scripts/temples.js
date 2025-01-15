@@ -8,3 +8,5 @@ const navigation = document.querySelector('nav');
 hamburger.addEventListener('click', function () {
     document.body.classList.toggle('show');
 })
+
+document.querySelector('#currentyear').innerHTML += `${new Date().getFullYear()}`;

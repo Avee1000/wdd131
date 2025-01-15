@@ -50,13 +50,4 @@
 
     }
 
-    .main figure img {
-        width: 300px;
-        height: 250px;
-        /* object-fit: cover; */
-    }
-
-    .main figcaption {
-        text-align: center;
-    }
 }

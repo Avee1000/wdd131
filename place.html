@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WDD 131 - Dynamic Web Fundamentals - Osamagumwende Flourish Idahosa-Sunny</title>
+        <meta name="author" content="Osamagumwende Flourish Idahosa-Sunny"/>
+        <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Osamagumwende Flourish Idahosa-Sunny"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@200;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/place.css">
+        <link rel="stylesheet" href="styles/place-large.css">
+        <link rel="stylesheet" href="https://avee1000.github.io/wdd230/css/all.css">
+        <script defer src="scripts/place.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Singapore</h1>
+        </header>
+        <div class="empty"></div>
+
+        <main>
+            <div class="hero">
+                <picture>
+                    <source media="(max-width: 640px )" srcset="images/hero-small.webp">
+                    <source media="(max-width: 1000px )" srcset="images/hero.webp">
+                    <img src="images/hero.webp" alt="hero Image" loading="lazy" width="1500" height="750">
+                </picture>
+
+                <div class="heroleftside">
+                    <h2>Data</h2>
+                    <ul>
+                        <li><strong>Population:</strong> 6, 040, 000</li>
+                        <li><strong>Area:</strong> 735.6 km²</li>
+                        <li><strong>Capital:</strong> Singapore</li>
+                        <li><strong>Official languages:</strong>English, Malay, Mandarin, Tamil</li>
+                        <li><strong>National language:</strong> Malay</li>
+                        <li><strong>Time Zone:</strong> UTC+8</li>
+                        <li><strong>Currency:</strong> Singapore dollar</li>
+                        <li><strong>Internet:</strong> .sg</li>
+                    </ul>
+                </div>
+
+                <div class="herorightside">
+                    <div class="weatherimage">
+                        <h2>Weather</h2>
+                        <img src="images/1530386_weather_clouds_fog_foggy_icon.svg" alt="weather icon">
+                    </div>
+                    <ul>
+                        <li id="temperature"></li>
+                        <li id="conditions"></li>
+                        <li id="wind"></li>
+                        <li id="windchill"></li>
+                    </ul>
+                </div>
+
+            </div>
+        </main>
+
+        
+        
+    </body>
+</html>

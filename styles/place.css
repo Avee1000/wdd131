@@ -11,7 +11,7 @@ body{
 header {
     display: flex;
     height: 140px;
-    background-color: #ba2121;
+    background-color: #5c1313;
 }
 
 header h1 {
@@ -49,7 +49,11 @@ header h1 {
     margin-bottom:25px ;
     text-align: center;
 }
-    
+
+.heroleftside h2, .herorightside h2 {
+    color: white;
+}
+
 .hero ul li {
     padding: 4px;
     font-size: 13px;
@@ -66,7 +70,7 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #ba2121;
+    background-color: #5c1313;
     padding: 10px;
     height: 120px;
 }
@@ -113,7 +117,7 @@ footer p::after {
         top: 10px;
         padding: 10px;
         margin-bottom:25px ;
-        background-color: rgba(186, 33, 33, 0.9);
+        background-color: #5c1313;
     }
     
     .weatherimage {

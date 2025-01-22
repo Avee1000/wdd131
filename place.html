@@ -18,14 +18,13 @@
         <header>
             <h1>Singapore</h1>
         </header>
-        <div class="empty"></div>
 
         <main>
             <div class="hero">
                 <picture>
-                    <source media="(max-width: 640px )" srcset="images/hero-small.webp">
-                    <source media="(max-width: 1000px )" srcset="images/hero.webp">
-                    <img src="images/hero.webp" alt="hero Image" loading="lazy" width="1500" height="750">
+                    <source srcset="images/hero.webp" media="(min-width: 1000px)">
+                    <source srcset="images/hero.webp" media="(min-width: 640px)">
+                    <img src="images/hero-small.webp" alt="Temple name and location" width="500" height="250">
                 </picture>
 
                 <div class="heroleftside">
@@ -34,10 +33,11 @@
                         <li><strong>Population:</strong> 6, 040, 000</li>
                         <li><strong>Area:</strong> 735.6 km²</li>
                         <li><strong>Capital:</strong> Singapore</li>
-                        <li><strong>Official languages:</strong>English, Malay, Mandarin, Tamil</li>
+                        <li><strong>Official languages:</strong> English, Malay, Mandarin, Tamil</li>
                         <li><strong>National language:</strong> Malay</li>
                         <li><strong>Time Zone:</strong> UTC+8</li>
                         <li><strong>Currency:</strong> Singapore dollar</li>
+                        <li><strong>Calling Code:</strong> </li>
                         <li><strong>Internet:</strong> .sg</li>
                     </ul>
                 </div>
@@ -58,7 +58,13 @@
             </div>
         </main>
 
-        
-        
+        <footer>
+            <p>
+                <span id="currentyear">&copy;</span> 👺Osamagumwende Flourish Idahosa-Sunny 👺Edo, Nigeria
+            </p>
+    
+            <p id="lastModified">Last Modification: </p>
+        </footer>
+
     </body>
 </html>

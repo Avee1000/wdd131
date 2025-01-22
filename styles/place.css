@@ -50,10 +50,6 @@ header h1 {
     text-align: center;
 }
 
-.heroleftside h2, .herorightside h2 {
-    color: white;
-}
-
 .hero ul li {
     padding: 4px;
     font-size: 13px;
@@ -78,10 +74,6 @@ footer{
 footer p {
     text-align: center;
     color: white;
-}
-
-footer p::after {
-    content: "🙂";
 }
 
 #currentyear {
@@ -119,6 +111,10 @@ footer p::after {
         margin-bottom:25px ;
         background-color: #5c1313;
     }
+
+    .heroleftside h2, .herorightside h2 {
+        color: white;
+    }
     
     .weatherimage {
         display: flex;
@@ -148,6 +144,10 @@ footer p::after {
         bottom: 10%;
         right: 5%;
         padding: 0;
+    }
+
+    footer p::after {
+        content: "🙂";
     }
     
 }

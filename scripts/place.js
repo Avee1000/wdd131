@@ -1,12 +1,41 @@
+const temp = 10;
+const speed = 4.8;
+
+const windChill = (temp, speed) => {
+    return 13.12 + 0.6215 * temp - 11.37 * Math.pow(speed, 0.16) + 0.3965 * temp * Math.pow(speed, 0.16);
+}
+
 const temperature = document.querySelector("#temperature");
 const condition = document.querySelector("#conditions");
 const wind = document.querySelector("#wind");
-const windChill = document.querySelector("#windchill");
+const chill = document.querySelector("#windchill");
 
-temperature.innerHTML = `<strong>Temperature:</strong> 10°C`;
-condition.innerHTML = `<strong>Conditions:</strong> Sunny`;
-wind.innerHTML = `<strong>Wind:</strong> 10 km/h`;
-windChill.innerHTML = `<strong>Wind Chill:</strong> 10°C`;
+if (temp <= 50 && speed > 3) {
+    const windChillValue = windChill(temp, speed);
+    temperature.innerHTML = `<strong>Temperature:</strong> ${temp}`;
+    condition.innerHTML = `<strong>Conditions:</strong> Cloudy`;
+    wind.innerHTML = `<strong>Wind:</strong> ${speed} km/h`;
+    chill.innerHTML = `<strong>Wind Chill:</strong> ${windChillValue.toFixed(0)}`;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 const date = new Date;

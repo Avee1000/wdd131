@@ -12,7 +12,7 @@ const chill = document.querySelector("#windchill");
 
 if (temp <= 50 && speed > 3) {
     const windChillValue = windChill(temp, speed);
-    temperature.innerHTML = `<strong>Temperature:</strong> ${temp}`;
+    temperature.innerHTML = `<strong>Temperature:</strong> ${temp}°C`;
     condition.innerHTML = `<strong>Conditions:</strong> Cloudy`;
     wind.innerHTML = `<strong>Wind:</strong> ${speed} km/h`;
     chill.innerHTML = `<strong>Wind Chill:</strong> ${windChillValue.toFixed(0)}`;

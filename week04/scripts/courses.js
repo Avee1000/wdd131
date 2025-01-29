@@ -52,7 +52,7 @@ function outputSections(course) {
     course.sections.forEach(section => {
         sectionsContainer.innerHTML += `
             <tr>
-                <td>${section.sectionNum}</td>
+                <td>${section['sectionNum']}</td>
                 <td>${section.roomNum}</td>
                 <td>${section.enrolled}</td>
                 <td>${section.days}</td>

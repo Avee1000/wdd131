@@ -96,21 +96,65 @@ const temples = [
 ];
 
 const main = document.querySelector('.main');
-  
-temples.forEach((temple) => {
-    const templeFigure = document.createElement('figure');
-    const templeName = document.createElement('h2');
-    const templeInfo = document.createElement('div');
-    const templeImage = document.createElement('img');
+const title = document.querySelector('#title');
 
-    templeName.textContent = temple.templeName;
-    templeInfo.innerHTML += `<p>Location: ${temple.location}</p>
-                                                    <p>Decidated: ${temple.dedicated}</p>
-        <p>Size: ${ temple.area } sq ft</p>`;
-    templeImage.setAttribute('src', temple.imageUrl);
-    templeImage.setAttribute('alt', temple.templeName);
-    templeImage.setAttribute('loading', 'lazy');
+function displayTemple(temples) {
+    temples.forEach((t) => {
+        const templeFigure = document.createElement('figure');
+        const templeName = document.createElement('h2');
+        const templeInfo = document.createElement('div');
+        const templeImage = document.createElement('img');
+    
+        templeName.textContent = t.templeName;
+        templeInfo.innerHTML += `<p>Location: ${t.location}</p>
+                                                        <p>Decidated: ${t.dedicated}</p>
+            <p>Size: ${ t.area } sq ft</p>`;
+        templeImage.setAttribute('src', t.imageUrl);
+        templeImage.setAttribute('alt', t.templeName);
+        templeImage.setAttribute('loading', 'lazy');
+    
+        templeFigure.append(templeName, templeInfo, templeImage);
+        main.appendChild(templeFigure);
 
-    templeFigure.append(templeName, templeInfo, templeImage);
-    main.appendChild(templeFigure);
+    })
+}
+
+function clearMain() {
+    main.innerHTML = '';
+}
+
+document.querySelector('#large').addEventListener('click', (e) => {
+    const filteredTemple = temples.filter((t) => t.area > 90000);
+    clearMain();
+    title.innerHTML = e.target.textContent;
+    displayTemple(filteredTemple);
 })
+
+document.querySelector('#small').addEventListener('click', (e) => {
+    const filteredTemple = temples.filter((t) => t.area < 10000);
+    clearMain();
+    title.innerHTML = e.target.textContent;
+    displayTemple(filteredTemple);
+})
+
+document.querySelector('#new').addEventListener('click', (e) => {
+    const filteredTemple = temples.filter((t) => new Date(t.dedicated).getFullYear() > 2000);
+    clearMain();
+    title.innerHTML = e.target.textContent;
+    displayTemple(filteredTemple);
+})
+
+document.querySelector('#old').addEventListener('click', (e) => {
+    const filteredTemple = temples.filter((t) => new Date(t.dedicated).getFullYear() < 1900);
+    clearMain();
+    title.innerHTML = e.target.textContent;
+    displayTemple(filteredTemple);
+})
+
+document.querySelector('#home').addEventListener('click', (e) => {
+    clearMain();
+    title.innerHTML = e.target.textContent;
+    displayTemple(temples);
+})
+
+displayTemple(temples);  

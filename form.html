@@ -22,7 +22,7 @@
             <form action="review.html" method="get">
                 
                 <div class="contain">
-                    <label class="label" for="product" >
+                    <label for="product" >Product Name
                         <select name="product" id="product" required>
                             <option value="none" selected disabled>Select a product.....</option>
                             <!-- an array is used to create the remaining options dynamically using JS -->
@@ -52,12 +52,12 @@
                     </label>
                 </div>
 
-                <div class="contain">
+                <div class="contain checkbox">
                     <div>Which features did you find usefile in the product?<br><i>(Check all that apply)</i></div>
-                    <label><input type="checkbox" name="features" value="Durability">Durability</label>
-                    <label><input type="checkbox" name="features" value="Ease of Use">Ease of Use</label>
-                    <label><input type="checkbox" name="features" value="Performance">Performance</label>
-                    <label><input type="checkbox" name="features" value="Design">Design</label>
+                    <label class="check"><input type="checkbox" name="features" value="Durability">Durability</label>
+                    <label class="check"><input type="checkbox" name="features" value="Ease of Use">Ease of Use</label>
+                    <label class="check"><input type="checkbox" name="features" value="Performance">Performance</label>
+                    <label class="check"><input type="checkbox" name="features" value="Design">Design</label>
                 </div>
 
                 <div class="contain">

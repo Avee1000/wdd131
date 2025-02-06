@@ -76,7 +76,7 @@ input[type="radio"] {
 	content: "\2605";
 }
 
-label, textarea, input[type="date"]{
+label, textarea, input[type="date"], select{
     display: block;
 }
 

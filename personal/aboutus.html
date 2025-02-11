@@ -20,10 +20,11 @@
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/test.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="icon" href="images/favicon.ico">
     <script src="scripts/sidenav.js" defer></script>
     <script src="scripts/hamburger.js" defer></script>
+    <script src="scripts/table.js" defer></script>
+    <script src="scripts/benefits-fade.js" defer></script>
 
 
 </head>
@@ -81,38 +82,78 @@
         </span>
         
         
-        <main id="contacts-main">
-          <div id="hero-box">
-            <section>
-                <h2>Need Help?<br> we're Here for You!</h2>
-                <span class="span1">
-                    Whether you’re a customer looking for a service or a provider needing support, we’re just a message away.
-                </span>
-                <span class="span2"></span>
-            </section>
+        <main id="aboutus-main">
+            <section id="aboutus">
+                <div class="meet">
+                    <h2>Meet ServiceHub</h2>
+                    <p>"One Place. Every Service. Endless Possibilities."</p>
+                </div>
+                <div id="statements">
+                    <div class="writings">
+                        <article>
+                            <div>
+                                <span class="redtick"></span>
+                                <h3>Connecting You with Experts</h3>
+                            </div>
+                            <p>Welcome to <span class="servicehub">ServiceHub</span>, your one-stop destination for finding reliable and convenient service providers across various industries. We know that finding trustworthy professionals—whether for home repairs, business support, personal care, or other essential services—can be time-consuming and overwhelming. That’s why we created a platform that simplifies this process, ensuring a seamless and stress-free experience for both customers and service providers.</p>
+                        </article>
 
-            <section class="herobuttons">
-                <a href="mailto:eddyidahosa01@gmail.com">Email Us</a>
-                <a href="">Start Chat</a>
-            </section>
-          </div>
+                        <article>
+                            <div>
+                                <span class="greentick"></span>
+                                <h3>Our Mission</h3>
+                            </div>
+                           <p>At  <span class="servicehub">ServiceHub</span>, our mission is to bridge the gap between people who need services and professionals who provide them. We believe in efficiency, trust, and quality, ensuring that every user can easily find and connect with the right service providers for their needs. By eliminating the hassle of endless searches and unreliable recommendations, we empower individuals to make informed decisions with confidence.</p>
+                        </article>
 
-          <div class="othercontactoptions">
-            <section class="contactform">
-                <div class="iconcontainer">
-                    <i class="fa fa-wpforms"></i>
+                        <article>
+                            <div>
+                                <span class="bluetick"></span>
+                                <h3>Empowering Service Providers</h3>
+                            </div>
+                           <p>At  <span class="servicehub">ServiceHub</span>, we’re dedicated to helping service providers grow and thrive. Our platform offers increased visibility, direct customer connections, and valuable networking opportunities—all designed to help you expand your reach and build your business. With <span class="servicehub">ServiceHub</span>, you’ll gain access to a pool of potential clients, enhance your reputation through feedback, and connect with fellow professionals to explore new opportunities.</p>
+                        </article>
+                    </div>
+
+                    <div class="photos">
+                        <picture>
+                            <source srcset="images/background-medium.webp" media="(max-width: 1660px)">
+                            <img src="images/background-large.webp" alt="Hero" loading="lazy" width="3000" height="2000">
+                        </picture>
+                    </div>
                 </div>
             </section>
-            <section></section>
-          </div>
 
-          <div id="realpeople">
-            <section class="talktorealpeople">
-                <h6>OUR SUPPORT TEAM</h6>
-                <span>Talk to real people</span>
-                <p>Whether you're a customer looking for reliable services or a service provider growing your business, our team is ready to assist you. Get in touch today and experience seamless support!</p>
+            <section id="offers">
+                <div class="offerscontainer">
+                    <article>
+                        <h2>What we Offer</h2>
+                    </article>
+                    <article class="whatweoffer">
+                        <div>
+                            <h3>For Service Providers</h3>
+                            <ul>
+                                <li><strong>Increased Visibility</strong></li>
+                                <li><strong>User-Friendly Booking System</strong></li>
+                                <li><strong>Client Feedback & Reviews</strong></li>
+                                <li><strong>Networking Opportunities</strong></li>
+                                <li><strong>Marketing Support</strong></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3>For Customers</h3>
+                            <ul>
+                                <li><strong>Comprehensive Service Directory</strong></li>
+                                <li><strong>Intuitive Search & Filtering</strong></li>
+                                <li><strong>Optional Communication with Providers</strong></li>
+                                <li><strong>Affordable Options</strong></li>
+                                <li><strong>Time-Saving Solutions</strong></li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
             </section>
-          </div>
      
         </main>
            
@@ -147,7 +188,7 @@
                                 <i class="fa fa-facebook-f"></i>                            
                             </a>
                             <a href="https://twitter.com" target="_blank">
-                                <i class="fa fa-x"></i>
+                                <i class="fa fa-twitter"></i>
                             </a>
                             <a href="https://instagram.com" target="_blank">
                                 <i class="fa fa-instagram"></i>

@@ -1,6 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@font-face {
+    font-family: 'Thicccboi';
+    src: url('https://cdn.prod.website-files.com/610611d7a1cb344c65731c96/610611d8a1cb3483fe731cd1_THICCCBOI-ExtraBold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: auto;
+  }
+  @font-face {
+    font-family: 'Thicccboi';
+    src: url('https://cdn.prod.website-files.com/610611d7a1cb344c65731c96/610611d8a1cb3455c6731cc6_THICCCBOI-SemiBold.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+  }
+  @font-face {
+    font-family: 'Thicccboi';
+    src: url('https://cdn.prod.website-files.com/610611d7a1cb344c65731c96/610611d8a1cb34468a731cd0_THICCCBOI-Bold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: auto;
+  }
+  @font-face {
+    font-family: 'Thicccboi';
+    src: url('https://cdn.prod.website-files.com/610611d7a1cb344c65731c96/610611d8a1cb3487d6731cd2_THICCCBOI-Medium.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: auto;
+  }
+  @font-face {
+    font-family: 'Reey';
+    src: url('https://cdn.prod.website-files.com/610611d7a1cb344c65731c96/610611d8a1cb341ed8731d32_Reey-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+  }
+  @font-face {
+    font-family: 'material icon';
+    src: url('https://cdn.prod.website-files.com/610611d7a1cb344c65731c96/641a34073ed7592f7b3a0b1a_MaterialIconsOutlined-Regular.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
 
 
 :root{
@@ -14,7 +54,7 @@
 *{
     box-sizing: border-box;
     padding: 0;
-
+    margin: 0;
 }
 
 body, html {
@@ -171,7 +211,7 @@ header {
     left: 0;
     background-color: white;
     overflow-x: hidden;
-    transition: 0.4s;
+    transition: 0.5s;
 }
 
 
@@ -182,7 +222,7 @@ header {
     top: 0;
     z-index: 0;
     overflow: hidden;
-    animation: move 0.4s ease-in-out 0s forwards;
+    animation: move 0.5s ease-in-out 0s forwards;
     transition: 0.5s;
     cursor: pointer;
     border-radius: 50%;
@@ -299,6 +339,259 @@ main {
     background-color: var(--mainColor);
 }
 
+
+/* =================================================================*/
+
+
+#aboutus-main {
+    height: auto;
+    font-family: thicccboi;
+    background-color: white;
+}
+
+#aboutus  {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.meet {
+    width: 100%;
+    text-align: center;
+    color: #212A31;
+    margin: 3rem 0 8rem 0;
+}
+
+.meet h2 {
+    font-size: 40px;
+    margin: 4rem 0 1rem 0;
+}
+
+.meet p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#statements {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.writings article {
+    text-align: left;
+    margin: 1rem 0 18rem 0;
+    color: #212A31;
+    scale: .5; opacity: 0.3;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: 200px 500px ;
+}
+.writings article h3 {
+    font-size: 25px;
+}
+
+.writings article div {
+    display: flex;
+    margin: 0 0 1rem 0;
+}
+
+.writings article p {
+    font-weight: 350;
+    line-height: 150%;
+}
+
+@keyframes fade-in {
+    /* from {scale: .8; opacity: 0;} */
+    to {scale: 1; opacity: 1;}
+}
+
+.redtick {
+    border-left: 10px solid #124e66;
+    border-radius: 15px;
+    margin-right: 1rem;
+}
+
+.greentick {
+    border-left: 10px solid #748D92;
+    border-radius: 15px;
+    margin-right: 1rem;
+}
+
+.bluetick {
+    border-left: 10px solid #D3D9D4;
+    border-radius: 15px;
+    margin-right: 1rem;
+}
+
+.servicehub {
+    font-weight: 800;
+}
+
+#offers {
+    height: auto;
+    background-color: #124e6640;
+    padding: 3rem;
+}
+
+
+#offers article h2 {
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+    padding: 3rem;
+    color: #212A31;
+    
+}
+
+.whatweoffer div:first-of-type h3{
+    margin: 0 auto;
+    background-color: #212a31db;
+    color: #f1f1f1;
+    padding: 1rem;
+    border-radius: 30px;
+    font-size: 18px;
+    width: 70%;
+    text-align: center;
+    margin-bottom: 2rem;
+
+}
+
+.whatweoffer div:last-of-type h3{
+    background-color: #D3D9D4;
+    margin: 0 auto;
+    color: #212a31db;
+    padding: 1rem;
+    border-radius: 30px;
+    font-size: 18px;
+    width: 70%;
+    text-align: center;
+    margin-bottom: 2rem;
+
+}
+
+.whatweoffer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;     
+    height: 100%;
+    line-height: 2;
+}
+
+.whatweoffer div:first-of-type ul{
+    background-color: #212a31db;
+    color: #f1f1f1;
+    padding: 1rem;
+    border-radius: 30px;
+    font-size: 15px;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+}
+
+.whatweoffer div:last-of-type ul{
+    background-color: #D3D9D4;
+    color: #212a31db;
+    padding: 1rem;
+    border-radius: 30px;
+    font-size: 15px;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+}
+
+.whatweoffer ul li {
+    display: block;
+}
+
+
+/* =================================================================*/
+#contacts-main {
+    background-color: white;
+    font-family: thicccboi;
+}
+
+#hero-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 200px 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 50px 1fr;
+    background-color: #2e3944;
+}
+
+    #hero-box section:first-of-type {
+        grid-column: 1/5;
+        grid-row: 2/5;
+        height: 100%;
+        padding: 6rem 0 0 4rem;
+    }
+
+#hero-box section h2 {
+    font-size: 70px;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+#hero-box section p {
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.span1 {
+    color: white;
+    font-size: 20px;
+}
+
+.herobuttons {
+    grid-column: span 2;
+    grid-row: 6/7;
+    padding-left: 4rem;
+    display: flex;
+    gap: 5px;
+}
+
+.herobuttons a {
+    padding: 13px 2rem;
+    text-decoration: none;
+    background-color: #D3D9D4;
+    border: 1px solid #D3D9D4;
+    border-radius: 30px;
+    height: 50%;
+    color: #2e3944;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.herobuttons a:hover {
+    background-color: #d3d9d48c;
+    transform: scale(1.05);
+}
+
+.herobuttons a:last-of-type {
+    background-color: transparent;
+    border: 1px solid #D3D9D4;
+    margin-left: 10px;
+    color: #D3D9D4;
+}
+
+.herobuttons a:last-of-type:hover {
+    background-color: #d3d9d48c;
+    color: #2e3944;
+}
+
+
+
+
 /*-------------------------------------------------------------------------------------------------------*/
 
 footer{
@@ -414,4 +707,176 @@ footer{
 .social-links a:hover{
     transition: all 1s ease-in-out;
     transform: scale(1.2);
+}
+
+
+@media  screen and (max-width: 640px) {
+
+    #aboutus-main {
+        height: auto;
+        font-family: thicccboi;
+        background-color: white;
+    }
+    
+    #aboutus  {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .meet {
+        width: 91%;
+        text-align: center;
+        color: #212A31;
+        margin: 3rem auto 8rem auto;
+    }
+    
+    .meet h2 {
+        font-size: 40px;
+        margin: 4rem 0 1rem 0;
+    }
+    
+    .meet p {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    
+    .photos {
+        display: none;
+    }
+
+    #statements {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .writings article {
+        text-align: left;
+        margin: 2rem 0 11rem 0;
+        color: #212A31;
+    }
+    .writings article h3 {
+        font-size: 25px;
+    }
+    
+    .writings article div {
+        display: flex;
+        margin: 0 0 1rem 0;
+    }
+    
+    .writings article p {
+        font-weight: 350;
+        line-height: 150%;
+    }
+    
+    .redtick {
+        border-left: 10px solid #124e66;
+        border-radius: 15px;
+        margin-right: 1rem;
+    }
+    
+    .greentick {
+        border-left: 10px solid #748D92;
+        border-radius: 15px;
+        margin-right: 1rem;
+    }
+    
+    .bluetick {
+        border-left: 10px solid #D3D9D4;
+        border-radius: 15px;
+        margin-right: 1rem;
+    }
+    
+    .servicehub {
+        font-weight: 800;
+    }
+    
+    #offers {
+        height: auto;
+        background-color: #124e6640;
+        padding: 3rem;
+    }
+    
+    
+    #offers article h2 {
+        font-size: 45px;
+        font-weight: 700;
+        text-align: center;
+        padding: 2rem 0 4rem 0;
+        color: #212A31;
+    }
+
+    .whatweoffer div:first-of-type{
+        padding: 3rem 0 5rem 0;
+        border-bottom: 2px solid rgba(148, 148, 148, 0.505);
+    }
+    
+    .whatweoffer div:last-of-type{
+        padding: 5rem 0 3rem 0;
+    }
+    
+    .whatweoffer div:first-of-type h3{
+        margin: 0 auto;
+        background-color: #212a31db;
+        color: #f1f1f1;
+        padding: 1rem;
+        border-radius: 30px;
+        font-size: 18px;
+        width: 70%;
+        text-align: center;
+        margin-bottom: 2rem;
+    
+    }
+    
+    .whatweoffer div:last-of-type h3{
+        background-color: #D3D9D4;
+        margin: 0 auto;
+        color: #212a31db;
+        padding: 1rem;
+        border-radius: 30px;
+        font-size: 18px;
+        width: 70%;
+        text-align: center;
+        margin-bottom: 2rem;
+    
+    }
+    
+    .whatweoffer ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;     
+        height: 100%;
+        line-height: 2;
+    }
+    
+    .whatweoffer div:first-of-type ul{
+        background-color: #212a31db;
+        color: #f1f1f1;
+        padding: 1rem;
+        border-radius: 30px;
+        font-size: 15px;
+        width: 100%;
+        height: 200px;
+        text-align: center;
+    }
+    
+    .whatweoffer div:last-of-type ul{
+        background-color: #D3D9D4;
+        color: #212a31db;
+        padding: 1rem;
+        border-radius: 30px;
+        font-size: 15px;
+        width: 100%;
+        height: 200px;
+        text-align: center;
+    }
+    
+    .whatweoffer ul li {
+        display: block;
+    }
+    
+    
 }

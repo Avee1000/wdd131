@@ -1,4 +1,4 @@
-@media screen and (min-width: 1400px){
+@media screen and (min-width: 1500px){
 
     #menu, span.delete{
         display: none;
@@ -18,15 +18,15 @@
 
     #home-hero-box {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 120px 1fr 1fr 1fr 50px  1fr 1fr;
         grid-template-rows: 1fr 300px 1fr 1fr 1fr;
 
     }
 
     #home-hero-box section:first-of-type {
-        grid-column: 1/5;
+        grid-column: 2/6;
         grid-row: 2/5;
-        padding-left: 10rem;
+        padding: 6rem 4rem 0 1rem;
  
     }
 
@@ -35,7 +35,7 @@
     }
 
     .homeherobuttonscontainer {
-        grid-column: 5/7;
+        grid-column: 6/8;
         grid-row: 2/5;
         width: 100%;
         height: 100%;

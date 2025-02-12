@@ -11,6 +11,7 @@ hamburger.addEventListener('click', () => {
 document.querySelector(".delete").addEventListener("click", () => {
     nav.classList.remove('show');
     nav.classList.toggle("delete-span");
+    document.body.style.overflow = '';
 });
 
 

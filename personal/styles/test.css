@@ -7,6 +7,51 @@
 
 
 .talktorealpeople h6 {
-    color: #212a31a6;
+    color: #212a31c7;
     text-align: center;
+}
+
+.othercontactoptions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 5rem 0 3rem 0;
+}
+
+.othercontactoptions section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    width:450px;
+    text-align: center;
+    border: 1px solid #212a3147;
+    border-radius: 20px;
+    padding: 1rem 2rem;
+}
+
+.othercontactoptions a{
+    padding: 17px 2rem;
+    text-decoration: none;
+    background-color: #e98717;
+    border-radius: 30px;
+    color: #0f1318;
+    width:190px;
+    transition: 0.3s ease-in-out;
+}
+
+.othercontactoptions a:hover{
+    background-color: #faa646;
+}
+
+.iconcontainer  *{
+    margin: 0 3px;
+    color: #7c4200;
+    /* change */
+}
+.iconcontainer span, .othercontactoptions p{
+    font-weight: 100;
 }

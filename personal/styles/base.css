@@ -382,10 +382,10 @@ main {
     text-align: left;
     margin: 1rem 0 18rem 0;
     color: #212A31;
-    scale: .5; opacity: 0.3;
+    scale: 1; opacity: 1;
     animation: fade-in linear forwards;
     animation-timeline: view();
-    animation-range: 200px 500px ;
+    animation-range: 70% ;
 }
 .writings article h3 {
     font-size: 25px;
@@ -403,7 +403,7 @@ main {
 
 @keyframes fade-in {
     /* from {scale: .8; opacity: 0;} */
-    to {scale: 1; opacity: 1;}
+    to {scale: 0.5; opacity: .3;}
 }
 
 .redtick {
@@ -551,7 +551,7 @@ main {
 }
 
 .herobuttons {
-    grid-column: span 2;
+    grid-column: span 3;
     grid-row: 6/7;
     padding-left: 4rem;
     display: flex;
@@ -570,6 +570,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 300px;
 }
 
 .herobuttons a:hover {

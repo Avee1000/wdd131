@@ -15,6 +15,26 @@
         padding-bottom: 3rem;
     }    
 
+    .herobuttons a {
+        height: 40%;
+        width: 150px;
+    }
     
+    .herobuttons a:hover {
+        background-color: #d3d9d48c;
+        transform: scale(1.05);
+    }
+    
+    .herobuttons a:last-of-type {
+        background-color: transparent;
+        border: 1px solid #D3D9D4;
+        margin-left: 10px;
+        color: #D3D9D4;
+    }
+    
+    .herobuttons a:last-of-type:hover {
+        background-color: #d3d9d48c;
+        color: #2e3944;
+    }
 
 }

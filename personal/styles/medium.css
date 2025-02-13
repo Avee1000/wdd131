@@ -1,4 +1,5 @@
-@media screen and (min-width: 801px){
+@media screen and (min-width: 641px){
+
 
     #menu, .delete {
         display:  none;
@@ -29,6 +30,7 @@
         height: 200px;
         margin: 2rem;
     }
+    
 
     .offerscontainer {
         width: 100%;
@@ -136,7 +138,24 @@
         font-size: 15px;
         line-height: 2.1;
     }
-    
+
+    #hubberherobox {
+        height: 400px;
+        justify-content: flex-end;
+        padding: 0 0 2rem 5rem;    
+    }
+
+    #regform {
+        width: 40vw;
+    }
+    .tab select,
+    .tab input[type="text"],
+    .tab input[type="tel"],
+    .tab input[type="email"],
+    .tab textarea{
+        width: 100%;
+    }
+
     
     
 

@@ -12,6 +12,22 @@ services.available.forEach((service) => {
 services.comingSoon.forEach((service) => { 
     const option = document.createElement("option");
   //   option.value = service.category;
-    option.innerHTML += service;
+    option.innerHTML += `<option>${service}</option>`;
     category.appendChild(option);
-  });
+});
+  
+const submit = document.getElementById("submit");
+const agree = document.getElementById("agree");
+
+agree.addEventListener("change", () => {
+  if (agree.checked) {
+    submit.disabled = false;
+    submit.classList.add("disabl")
+  } else {
+    submit.disabled = true;
+    submit.classList.remove("disabl");
+  }
+});
+
+
+

@@ -48,7 +48,7 @@
     --mainColor: #D3D9D4;
     --text-color: "black";
     --required-color: rgb(166, 7, 7);
-    --valid-color: rgb(4, 110, 4);
+    --valid-color: #e98717;
 }
 
 *{
@@ -59,6 +59,7 @@
 }
 
 body, html {
+    padding: 0;
     margin: auto;
     height: auto;
     scroll-behavior: smooth;
@@ -76,7 +77,7 @@ body, html {
 
 header {
     background-color:var(--headerColor) ;
-    padding: 0 5%;
+    padding: 0 5% 0 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -84,16 +85,7 @@ header {
     width: 100%;
 }
 
-/* header h1{
-    position: relative;
-    font-family: 'roboto', arial, helvetica;
-    color: black;
-    font-size: 40px;
-    font-weight: 600;
-} */
-
 .header-box{
-    margin-left: 15px;
     display: flex;
     align-items: center;
 }
@@ -101,13 +93,8 @@ header {
 .logo1{
     background-color: #212A31;
     position: relative;
-    /* border-radius: 50%; */
-    width: 90px; height: 90px;
+    width: 100px; height: 120px;
 }
-
-/* .closebtn{
-    display: none;
-} */
 
 #menu{
     color: white;
@@ -303,11 +290,11 @@ input[type="search"]{
     border-radius: 5px 0px 0px 5px;
 
 }
-input:hover{
+input[type="search"]:hover{
     width: 270px;
 }
 
-input:focus{
+input[type="search"]:focus{
     box-sizing: border-box;
     width: 300px;
 }
@@ -637,6 +624,7 @@ main {
     grid-template-columns: 1fr 1fr 200px 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 50px 1fr;
     background-color: #2e3944;
+    
 }
 
 #hero-box section:first-of-type {
@@ -771,7 +759,7 @@ main {
 }
 
 .hubberherocontent1 h2 {
-    font-size: 70px;
+    font-size: 75px;
 }
 
 .hubberherocontent2 h3 {
@@ -831,6 +819,117 @@ main {
 }
 .whyjoin2 ul li strong {
     font-weight: 500;
+}
+
+
+/* =================================================================*/
+
+#formscontainer {
+    background-color: #124E66;
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+    padding: 3rem 0;
+    color: white;
+}
+
+#regform {
+    width: 50vw;
+    display: grid;
+    gap: 20px;
+}
+.tab input, .tab select, #description {
+    display: block;
+}
+.tab label {
+    font-family: roboto;
+    font-weight: 300;
+    font-size: 15px;
+    display: block;
+    padding: 1rem;
+}
+.tab fieldset {
+    border-radius: 6px;
+    padding: 1rem 2%;
+    font-size: 18px;
+}
+.tab legend {
+    padding:0 .5rem;
+}
+input[type="text"],
+input[type="tel"],
+input[type="email"]
+{
+    background-color: #eee;
+    display: block;
+    border: 1px solid #999;
+    border-radius: 2px;
+    padding: .75rem;
+    width: 70%;
+    color: #555;
+    appearance: none;
+    border: transparent;
+}
+.tab textarea {
+    padding: 1rem;
+    background-color: #eee;
+    display: block;
+    border: 1px solid #999;
+    border-radius: 6px;
+    width: 70%;
+    height: 150px;
+    resize: none;
+}
+.tab input:required{
+    border-right: 5px solid;
+    border-right-color: var(--required-color);
+}
+.tab input:required:valid{
+    border-right: 5px solid;
+    border-right-color: var(--valid-color);
+}
+.tab select {
+    background-color: #eee;
+    display: block;
+    border: 1px solid #999;
+    border-radius: 2px;
+    padding: .75rem;
+    width: 70%;
+    color: black;
+    border: transparent;
+}
+.tandc {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: roboto;
+    font-weight: 200;
+    font-size: 14px;
+}
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+.button {
+    display: block;
+    text-align: center;
+}
+.button input {
+    background-color: #e98717;
+    color: black;
+    width: 50%;
+    appearance: none;
+    border: none;
+    padding: .75rem;
+    /* cursor: pointer; */
+}
+.disabl:hover {
+    background-color: #f69628;
+}
+.disabl {
+    background-color: #e98717;
+    cursor: pointer;
 }
 
 
@@ -952,9 +1051,15 @@ footer{
 }
 
 
-@media  screen and (max-width: 800px) {
+@media  screen and (max-width: 640px) {
+    * {
+        box-sizing: border-box;
+    }
 
-
+    #content {
+        width: 100%;
+        display: block;
+    }
     #menu{
         display: inline-block;
         width: 50px;     line-height: 50px;    height: 50px; 
@@ -1048,7 +1153,9 @@ footer{
 
     #searchbox {
         left: 30px;
+
     }
+
     #home-hero-box {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 200px 1fr 1fr 100px 100px ;
@@ -1161,7 +1268,7 @@ footer{
     #offers {
         height: auto;
         background-color: #124e6640;
-        padding: 3rem;
+        padding: unset;
     }
     
     
@@ -1175,7 +1282,7 @@ footer{
 
     .whatweoffer div:first-of-type{
         padding: 3rem 0 5rem 0;
-        border-bottom: 2px solid rgba(148, 148, 148, 0.505);
+        border-bottom: 2px solid rgba(27, 27, 27, 0.505);
     }
     
     .whatweoffer div:last-of-type{
@@ -1187,12 +1294,10 @@ footer{
         background-color: #212a31db;
         color: #f1f1f1;
         padding: 1rem;
-        border-radius: 30px;
-        font-size: 18px;
-        width: 300px;
+        font-size: clamp(10px, 15px, 18px);
+        width: 180px;
         text-align: center;
         margin-bottom: 2rem;
-    
     }
     
     .whatweoffer div:last-of-type h3{
@@ -1201,8 +1306,8 @@ footer{
         color: #212a31db;
         padding: 1rem;
         border-radius: 30px;
-        font-size: 18px;
-        width: 300px;
+        font-size: clamp(10px, 15px, 18px);
+        width: 180px;
         text-align: center;
         margin-bottom: 2rem;
     
@@ -1229,9 +1334,9 @@ footer{
         background-color: #212a31db;
         color: #f1f1f1;
         padding: 1rem;
-        border-radius: 30px;
+        border-radius: unset;
         font-size: 15px;
-        width: 400px;
+        width: 100%;
         height: 200px;
         text-align: center;
     }
@@ -1240,9 +1345,9 @@ footer{
         background-color: #D3D9D4;
         color: #212a31db;
         padding: 1rem;
-        border-radius: 30px;
+        border-radius: unset;
         font-size: 15px;
-        width: 400px;
+        width: 100%;
         height: 200px;
         text-align: center;
     }
@@ -1275,6 +1380,7 @@ footer{
         padding: 2rem 2.5rem 0 2.5rem;
     }
     .herobuttons{
+        all: unset;
         padding: 0;
         width: 100%;
         display: flex;
@@ -1286,8 +1392,12 @@ footer{
     }
     .herobuttons a {
         /* padding: 0 0; */
+        padding: min(4em, 20px);
         margin: 0;
-        width: 150px;
+        width: calc(120% /4);
+        height: calc(100%/5);
+        text-align: center;
+        font-size: clamp(9px, 12px, 18px);
     }
     .herobuttons a:last-of-type {
         margin: 0;

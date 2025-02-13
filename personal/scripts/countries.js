@@ -25,24 +25,21 @@ lo.addEventListener("change", () => {
         city.disabled = false;
         async function displayCity() {
             const countryCity = await getCountries();
-            const list = [ ];
-            for (let i = 0; i < countryCity.length; i++) {
-                list.push(countryCity[i].country);
-            }
-            list.forEach((cityname) => {
+            const selectCountry = countryCity.find((c) => c.country === `${lo.value}`);
+            selectCountry.cities.forEach((cityName) => {
                 const cityOption = document.createElement("option");
-                const chosenCountry = list.indexOf(`${lo.value}`);
-                const selectedCountry = chosenCountry + 1;
-
-                alert(`${list[chosenCountry]} `);
+                cityOption.value = cityName;
+                cityOption.innerHTML = cityName;
+                // alert(`${list[chosenCountry]} `);
+                city.appendChild(cityOption);
             });
         }
         displayCity();
 
     } else {
+        city.innerHTML = "<option>Select City</option>";
         city.disabled = true;
     }
-
 })
 
 

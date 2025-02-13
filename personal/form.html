@@ -22,8 +22,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="icon" href="images/favicon.ico">
-    <script src="scripts/sidenav.js" defer></script>
+    <script type="module" src="scripts/sidenav.js" defer></script>
     <script src="scripts/hamburger.js" defer></script>
+    <script type="module" src="scripts/forms.js" defer></script>
+
 
 
 </head>
@@ -114,8 +116,63 @@
             </div>
 
             <div id="formscontainer">
-                <form action="" method="get">
-                    
+                <form action="" method="get" id="regform">
+                    <div  class="tab" >
+                        <fieldset>
+                            <legend>Basic Information</legend>
+                            <!-- <h1> Customer Information</h1> -->
+                            <label>First Name <span class="fa fa-asterisk"></span><input type="text" id="firstname" name="firstname" required></label>
+                            <label>Last Name<span class="fa fa-asterisk"></span><input type="text" id="lastname" name="lastname" required></label>
+
+                            <!-- <label>Title or Position*<input type="text" pattern="^[A-Za-z\- ]{7,}" id="title" name="title" required></label> -->
+
+                            <!-- <label>Password*<input type="password" pattern="(?=.*\d.*\d)(?=.*[A-Za-z]).{8,}" id="pwd" name="pwd" 
+                                placeholder="Password must be 8 characters long and alpha-numberic" required></label> -->
+            
+                            <label>Email Address<span class="fa fa-asterisk"></span><input type="email" pattern="[a-zA-Z0-9_.\-]+@[a-Za-Z]+\.(?=.*com)" id="email" name="email" 
+                                placeholder="someone@example.com" title="Please enter a valid email address" required></label>
+
+                            <label>Mobile Phone No.<span class="fa fa-asterisk"></span><input type="tel"  id="phone" name="phone" required></label>
+
+                            <label>Business Name<span><i>(Optional)</i></span><input type="text"  id="businessName" name="businessName" required></label>
+                        </fieldset>                                            
+                    </div>
+
+                    <div  class="tab" >
+                        <fieldset>
+                            <legend>Business Verification</legend>
+                            <!-- <h1> Customer Information</h1> -->
+                             <label for="">
+                                <select name="category" id="category" required>
+                                    <option value="">Select Category</option>
+                                </select>
+                             </label>
+                            <label>First Name <span class="fa fa-asterisk"></span><input type="text" id="firstname" name="firstname" required></label>
+                            <label>Last Name<span class="fa fa-asterisk"></span><input type="text" id="lastname" name="lastname" required></label>
+
+                            <!-- <label>Title or Position*<input type="text" pattern="^[A-Za-z\- ]{7,}" id="title" name="title" required></label> -->
+
+                            <!-- <label>Password*<input type="password" pattern="(?=.*\d.*\d)(?=.*[A-Za-z]).{8,}" id="pwd" name="pwd" 
+                                placeholder="Password must be 8 characters long and alpha-numberic" required></label> -->
+            
+                            <label>Email Address<span class="fa fa-asterisk"></span><input type="email" pattern="[a-zA-Z0-9_.\-]+@[a-Za-Z]+\.(?=.*com)" id="email" name="email" 
+                                placeholder="someone@example.com" title="Please enter a valid email address" required></label>
+
+                            <label>Mobile Phone No.<span class="fa fa-asterisk"></span><input type="tel"  id="phone" name="phone" required></label>
+
+                            <label>Business Name<span><i>(Optional)</i></span><input type="text"  id="businessName" name="businessName" required></label>
+                        </fieldset>                                            
+                        <div class="next-button">
+                            <button type="button" class="nextBtn" onclick="nextPrev(1)">Next</button>
+                        </div>
+                    </div>
+
+                    <div class="step-row">
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                    </div>
+
                 </form>
             </div>
 

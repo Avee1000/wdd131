@@ -4,5 +4,18 @@
 }
 
 
+#formscontainer {
+    background-color: white;
+}
 
+.tab input {
+    display: block;
+}
 
+#category options {
+    color: black;
+}
+#category {
+    max-height: 30px;
+    overflow-y: scroll;
+}

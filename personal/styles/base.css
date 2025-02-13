@@ -340,13 +340,14 @@ main {
     grid-template-rows: 1fr 300px 1fr 1fr 1fr 2fr;
     background-color: #d3d9d476;
     color: #212A31;
+
 }
 
 #home-hero-box section:first-of-type {
     grid-column: 1/5;
     grid-row: 2/5;
     height: 100%;
-    padding: 6rem 0 0 4rem;
+    padding: min(5vw, 50px) min(10vw, 20px) min(2vw, 15px) min(4vw, 25px);
     margin-bottom: 50px;
 
 }
@@ -435,7 +436,7 @@ main {
     padding: 16px 0;
     border-radius: 60px;
     color: black;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
 
 }
 
@@ -445,8 +446,8 @@ main {
 
 
 .homeherobuttonscontainer div a:first-of-type {
-    background-color: #212A31;
-    color: white;
+    background-color: #e98717ed;
+    color: black;
     width: 200px;
     padding: 16px 0;
     border-radius: 60px;
@@ -454,7 +455,7 @@ main {
 }
 
 .homeherobuttonscontainer div a:first-of-type:hover{
-    background-color: #212a31d5;
+    background-color: #e98717b8;
 }
 
 
@@ -803,13 +804,14 @@ main {
 
 .whyjoin1 {
     width: 70%;
-    background-color: white;
+    background-color: black;
     display: grid;
     place-items: center;
 }
 
 .whyjoin1 h2 {
-    font-size: 70px;
+    color: white;
+    font-size: 90px;
     font-weight: 900;
 }
 
@@ -1062,11 +1064,11 @@ footer{
     #home-hero-box section:first-of-type {
         grid-column: 1/4;
         grid-row: 2/4;
-        padding: 2rem;
+        padding: 2.6rem;
     }
     .homeherobuttonscontainer {
         grid-row: 4/6;
-        background-color: #124e6638;
+        background-color: #124e66;
     }
     .homeherobuttonscontainer div {
         background-color: transparent;
@@ -1262,7 +1264,7 @@ footer{
         color: white;
         text-align: center;
         margin: 0;
-        padding: 0 1rem;
+        padding: 0 2rem;
     }
     .span1 {
         display: block;
@@ -1270,7 +1272,7 @@ footer{
         font-size: 20px;
         font-weight: 100;
         text-align: center;
-        padding: 2rem 1rem 0 1rem;
+        padding: 2rem 2.5rem 0 2.5rem;
     }
     .herobuttons{
         padding: 0;

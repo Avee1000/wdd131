@@ -81,3 +81,5 @@ document.querySelector('.close').addEventListener('click', () => {
 
 
 // Apply styles to all elements
+
+export default services;

@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Osamagumwende Flourish Idahosa-Sunny" />
-    <meta name="description" content="ServiceHub - Contact Us" />
+    <meta name="description" content="ServiceHub - About Us" />
     <meta property="og:title" content="ServiceHub Company" />
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://avee1000.github.io/wdd230/personal/images/homepage/aerial.webp" />
-    <meta property="og:url" content="https://avee1000.github.io/wdd131/personal" />
+    <meta property="og:url" content="https://avee1000.github.io/wdd131/personal/aboutus.html" />
     <title>ServiceHub - Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,16 +18,18 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/larger.css">
-
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="icon" href="images/favicon.ico">
-    <script type="module" src="scripts/sidenav.js" ></script>
+    <script type="module" src="scripts/sidenav.js"></script>
     <script src="scripts/hamburger.js" defer></script>
+    <!-- <script src="scripts/table.js" defer></script>
+    <script src="scripts/benefits-fade.js" defer></script> -->
 
 
 </head>
+
 <body>
-    <div id="content">        
+    <div id="content">
         <header id="contact-header">
             <div class="header-box">
                 <a id="logo_link1" href="index.html">
@@ -34,16 +37,16 @@
                 </a>
                 <!-- <h1>......</h1> -->
             </div>
-            
+
             <nav>
                 <ul class="navigation">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="aboutus.html">About Us</a></li>
-                    <li><a href="contacts.html" class="active">Contact Us</a></li>
+                    <li><a href="aboutus.html" class="active">About Us</a></li>
+                    <li><a href="contacts.html">Contact Us</a></li>
                     <li class="recent"><a>Recents</a></li>
                 </ul>
                 <div class="justrecent"></div>
-                <div id="recentContainer"  class="recentContainer">
+                <div id="recentContainer" class="recentContainer">
                     <section>
                         <h2>..</h2>
                     </section>
@@ -56,27 +59,26 @@
             <a id="menu"><i class="fa fa-bars"></i></a>
         </header>
 
-
         <div class="searchContainer">
-            <a  id="sideMenu">
+            <a id="sideMenu">
                 <i class="fa-solid fa-bars fa-xl"></i>
             </a>
-            <div id="searchbox" >
+            <div id="searchbox">
                 <input type="search" id="search" name="q" placeholder="Search Services">
-                <button  aria-label="button" id="search-icon"><i class="fa-solid fa fa-search fa-xl"></i></button>
+                <button aria-label="button" id="search-icon"><i class="fa-solid fa fa-search fa-xl"></i></button>
             </div>
-        </div>    
+        </div>
 
         <div class="just"></div>
 
         <div id="mySidenav" class="sidenav">
-            <div id="serviceContainer"> 
+            <div id="serviceContainer">
                 <ul id="serviceUnorderedList">
                     <li><span>Available Services</span></li>
                 </ul>
                 <!-- nav elements to be populated in JS -->
 
-                <ul id="comingSoonUnorderedList">                
+                <ul id="comingSoonUnorderedList">
                     <li><span>Coming soon</span></li>
                 </ul>
             </div>
@@ -84,57 +86,102 @@
         <span class="close">
             <i class="fa-solid fa-close"></i>
         </span>
-        
-        <main id="contacts-main">
-          <div id="hero-box">
-            <section>
-                <h2>Need Help?<br> we're Here for You!</h2>
-                <span class="span1">
-                    Whether you’re a customer looking for a service or a provider needing support, we’re just a message away.
-                </span>
-                <span class="span2"></span>
+
+        <main id="aboutus-main">
+            <section id="aboutus">
+                <div class="meet">
+                    <h2>Meet ServiceHub</h2>
+                    <p>"One Place. Every Service. Endless Possibilities."</p>
+                </div>
+                <div id="statements">
+                    <div class="writings">
+                        <article>
+                            <div>
+                                <span class="redtick"></span>
+                                <h3>Connecting You with Experts</h3>
+                            </div>
+                            <p>Welcome to <span class="servicehub">ServiceHub</span>, your one-stop destination for
+                                finding reliable and convenient service providers across various industries. We know
+                                that finding trustworthy professionals—whether for home repairs, business support,
+                                personal care, or other essential services—can be time-consuming and overwhelming.
+                                That’s why we created a platform that simplifies this process, ensuring a seamless and
+                                stress-free experience for both customers and service providers.</p>
+                        </article>
+
+                        <article>
+                            <div>
+                                <span class="greentick"></span>
+                                <h3>Our Mission</h3>
+                            </div>
+                            <p>At <span class="servicehub">ServiceHub</span>, our mission is to bridge the gap between
+                                people who need services and professionals who provide them. We believe in efficiency,
+                                trust, and quality, ensuring that every user can easily find and connect with the right
+                                service providers for their needs. By eliminating the hassle of endless searches and
+                                unreliable recommendations, we empower individuals to make informed decisions with
+                                confidence.</p>
+                        </article>
+
+                        <article>
+                            <div>
+                                <span class="bluetick"></span>
+                                <h3>Empowering Service Providers</h3>
+                            </div>
+                            <p>At <span class="servicehub">ServiceHub</span>, we’re dedicated to helping service
+                                providers grow and thrive. Our platform offers increased visibility, direct customer
+                                connections, and valuable networking opportunities—all designed to help you expand your
+                                reach and build your business. With <span class="servicehub">ServiceHub</span>, you’ll
+                                gain access to a pool of potential clients, enhance your reputation through feedback,
+                                and connect with fellow professionals to explore new opportunities.</p>
+                        </article>
+                    </div>
+
+                    <div class="photos">
+                        <picture>
+                            <source srcset="images/background-medium.webp" media="(max-width: 1660px)">
+                            <img src="images/background-large.webp" alt="Hero" loading="lazy" width="3000"
+                                height="2000">
+                        </picture>
+                    </div>
+                </div>
             </section>
 
-            <div class="herobuttons">
-                <a href="mailto:eddyidahosa01@gmail.com">Email Us</a>
-                <a href="https://wa.me/+2349136196176" target="_blank">Start Chat</a>
-            </div>
-        </div>
+            <div id="offers">
+                <div class="offerscontainer">
+                    <article>
+                        <h2>What we Offer</h2>
+                    </article>
+                    <article class="whatweoffer">
+                        <div>
+                            <h3>For Service Providers</h3>
+                            <ul>
+                                <li><strong>Increased Visibility</strong></li>
+                                <li><strong>User-Friendly Booking System</strong></li>
+                                <li><strong>Client Feedback & Reviews</strong></li>
+                                <li><strong>Networking Opportunities</strong></li>
+                                <li><strong>Marketing Support</strong></li>
+                            </ul>
+                        </div>
 
-        <div class="othercontactoptions">
-            <div class="contactform">
-                <div class="iconcontainer">
-                    <i class="fa fa-file"></i>
-                    <span>Fill out a Form</span>
+                        <div>
+                            <h3>For Customers</h3>
+                            <ul>
+                                <li><strong>Comprehensive Service Directory</strong></li>
+                                <li><strong>Intuitive Search & Filtering</strong></li>
+                                <li><strong>Optional Communication with Providers</strong></li>
+                                <li><strong>Affordable Options</strong></li>
+                                <li><strong>Time-Saving Solutions</strong></li>
+                            </ul>
+                        </div>
+                    </article>
                 </div>
-                <p>Response Time: 10 minutes</p>
-                <a href="forms.html">Fill out a Form</a>
             </div>
 
-            <div class="contactform">
-                <div class="iconcontainer">
-                    <i class="fa fa-phone"></i>
-                    <span>Call Us</span>
-                </div>
-                <p>Hours of Operation: Available 24/7<br><strong>Only phone calls allowed</strong></p>
-                <a class="call-button" href="tel:+2349136196176">Call Now</a>
-            </div>
-        </div>
-
-          <div id="realpeople">
-            <section class="talktorealpeople">
-                <h6>OUR SUPPORT TEAM</h6>
-                <span>Talk to real people</span>
-                <p>Whether you're a customer looking for reliable services or a service provider growing your business, our team is ready to assist you. Get in touch today and experience seamless support!</p>
-            </section>
-          </div>
-     
         </main>
-           
-            <div id="backToTop">
-                <button class="accordion">Back to top</button>
-            </div>    
-          
+
+        <div id="backToTop">
+            <button class="accordion">Back to top</button>
+        </div>
+
 
         <footer id="footer">
             <div class="firstfooterwrapper">
@@ -192,19 +239,19 @@
             <div class="secondfooterwrappercontainer">
                 <div class="secondfooterwrapper">
                     <!-- <div class="otherfooterlinks">
-                        <div class="firstrowlink">
-                            <a><strong>Jobs</strong> <br>& <br>Careers</a>
-                            <a><strong>Business</strong> <br>Partners<br>& <br>affiliates</a>
-                            <a><strong>Site</strong><br>Credits</a>
-                            <a><strong>Referral</strong><br>Program</a>
-                        </div>
-                        <div class="secondrowlink">
-                            <a><strong>Customer</strong><br>Testimonials</a>
-                            <a><strong>Service</strong><br>Areas</a>
-                            <a><strong>Press</strong><br>&<br>Media</a>
-                            <a><strong>Gift Cards</strong><br>or<br>Vouchers</a>
-                        </div>
-                    </div> -->
+                            <div class="firstrowlink">
+                                <a><strong>Jobs</strong> <br>& <br>Careers</a>
+                                <a><strong>Business</strong> <br>Partners<br>& <br>affiliates</a>
+                                <a><strong>Site</strong><br>Credits</a>
+                                <a><strong>Referral</strong><br>Program</a>
+                            </div>
+                            <div class="secondrowlink">
+                                <a><strong>Customer</strong><br>Testimonials</a>
+                                <a><strong>Service</strong><br>Areas</a>
+                                <a><strong>Press</strong><br>&<br>Media</a>
+                                <a><strong>Gift Cards</strong><br>or<br>Vouchers</a>
+                            </div>
+                        </div> -->
                     <div id="social-container">
                         <div class="social-links">
                             <a href="https://facebook.com" aria-label="facebook" target="_blank">
@@ -228,13 +275,16 @@
                 </div>
             </div>
         </footer>
-    
+
 
         <script>
             const scrollToTop = document.querySelector(".accordion");
 
             scrollToTop.addEventListener("click", () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
             });
         </script>
 
@@ -242,4 +292,5 @@
 
     </div>
 </body>
+
 </html>

@@ -85,11 +85,14 @@ header {
     width: 100%;
 }
 
+header#logo_link1 {
+    border-top: transparent;
+}
+
 .header-box{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.605);
     height: 100px;
 }
 .logo1 {
@@ -293,7 +296,7 @@ li.recent a:hover {
     padding: 16px 2.5rem;
 } */
 
-.serviceNames,  .recentContainer ul li {
+.serviceNames,  .recentContainer ul li a {
     display: block;
     text-decoration: none;
     padding: 1.2rem 2.5rem;
@@ -423,10 +426,10 @@ main {
 
 @keyframes zoom-in {
     0% {
-        scale: 1;
+        transform: scale(1);
     }
     50%{
-        scale: 1.08;
+        transform: scale(1.08);
     }
 }
 
@@ -494,19 +497,56 @@ main {
 
 .howitworks{
     flex: 1 1 40%;
+    width: 100%;
+    background-color: #e98717;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 16px;
 }
-
+.howitworks h2 {
+    font-size: clamp(12px, 7vw, 50px);
+    font-weight: 900;
+    display: block;
+    text-align: right;
+    padding-right: min(6em, 60px);
+}
 .typewriter {
     position: relative;
     background-color: black;
     color: #D3D9D4;
     min-height: 600px;
     flex: 1 1 60%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
+.typewritertext {
+    font-size: clamp(12px, 5vw, 50px);
+    opacity: 0;
+    padding: min(5em, 20px);
+}
+.t1 {
+    animation: show 4s ease-in-out 0s infinite alternate;
+}
+
+.t2 {
+    animation: show 4s ease-in-out 4s infinite alternate;
+}
+
+.t3 {
+    animation: show 6s ease-in-out 8s infinite alternate;
+}
+
+@keyframes show {
+    0% { opacity: 1; }  /* Fully visible */
+    100% { opacity: 0; } /* Fully invisible */
+}
+
+
+
 
 
 /* =================================================================*/
@@ -551,7 +591,8 @@ main {
     text-align: left;
     margin: 1rem 0 18rem 0;
     color: #212A31;
-    scale: 1; opacity: 1;
+    transform: scale(1);
+    opacity: 1;
     animation: fade-in linear forwards;
     animation-timeline: view();
     animation-range: 70% ;
@@ -572,7 +613,7 @@ main {
 
 @keyframes fade-in {
     /* from {scale: .8; opacity: 0;} */
-    to {scale: 0.5; opacity: .3;}
+    to {transform: scale(0.5); opacity: .3;}
 }
 
 .redtick {
@@ -829,32 +870,6 @@ main {
     color: white;
     font-size: 40px;
 }
-/* .typewriter p {
-    display: inline-block;
-    overflow: hidden; 
-    white-space: nowrap;
-    border-right: 3px solid black; 
-    font-size: 24px;
-    font-family: monospace;
-    width: 0;
-    padding: 0;
-    animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: auto;
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-} */
 
 .hubberherocontent3 div {
     width: 50%;
@@ -1053,7 +1068,7 @@ input[type="checkbox"] {
     background-color: #2e3944d9; 
     height: 50px;
     width: 100%;
-    font-size: 18px;
+    font-size: calc(100%/2);
     font-weight: 300;
     text-decoration: none;
     transition: top 0.3s;
@@ -1066,16 +1081,7 @@ input[type="checkbox"] {
     background-color: #2e3944d5;
 }
 
-.accordion::after {
-    content: "\25B4";/* Unicode character for "plus" sign (+) */
-    font-size: 18px;
-    color: #F1FAEE;
-    margin-left: 2px;
-}
 
-.accordion:hover{
-    cursor: pointer;
-}
 
 /*-------------------------------------------------------------------------------------------------------*/
 
@@ -1103,6 +1109,7 @@ input[type="checkbox"] {
     max-width: 1000px;
     margin: 0 auto;
     padding: 1rem 0;
+    font-size: .8rem;
 }
 .fourContainersDiv div {
     display: table-cell;
@@ -1110,6 +1117,7 @@ input[type="checkbox"] {
     vertical-align: top; 
     min-width: 200px; 
     color: white;
+    font-size: 16px;
 }
 .fourContainersDiv section h3 {
     margin-bottom: 10px;
@@ -1145,29 +1153,21 @@ input[type="checkbox"] {
 
 
 #social-container{
-    grid-row: 2/3;
-    grid-column: 1/4;
+
     max-width: 1000px;
-    height: 100%;
+    height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    padding-bottom: 2rem;
 }
 
 .copyright p{
     font-family: 'roboto';
     color: white;
     text-align: center;
-}
-
-.copyright span{
-    color: black;
-    background-color: white;
-    border-radius: 7px;
-    padding: 2px;
-    font-weight: 800;
 }
 
 .social-links{
@@ -1231,6 +1231,7 @@ input[type="checkbox"] {
         display: none;
         flex-direction: column;
         height: 100%;
+        max-height: 100svh;
         width: 100%;
         position: fixed; 
         z-index: 1; 
@@ -1324,7 +1325,7 @@ input[type="checkbox"] {
         /* grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 200px 1fr 1fr 100px 100px ; */
         display: block;
-        padding: 2rem 0
+        padding: 2rem 0 0 0
     }
     #home-hero-box section h2{
         text-align: center;
@@ -1346,12 +1347,22 @@ input[type="checkbox"] {
     .homeherobuttonscontainer {
         grid-row: 4/6;
         background-color: #124e66;
+        padding: 2rem 0;
     }
     .homeherobuttonscontainer div {
         background-color: transparent;
     }
     .homeherobuttonscontainer div a {
         box-shadow: 2px 2px 8px 2px  rgb(71, 71, 71);
+    }
+    #howitworkscontainer {
+        flex-direction: column;
+    }
+    .howitworks {
+        display: none;
+    }
+    .typewriter {
+        flex-direction: column;
     }
 
     #aboutus-main {
@@ -1374,7 +1385,7 @@ input[type="checkbox"] {
     
     .meet h2 {
         font-size: 50px;
-        font-size: 800;
+        font-weight: 800;
         margin: 4rem 0 1rem 0;
     }
     
@@ -1646,5 +1657,30 @@ input[type="checkbox"] {
     }
     .tab select, .tab textarea {
         width: 100%;
+    }
+    .fourContainersDiv{
+        display: flex;
+        flex-direction: column;
+    }
+    .fourContainersDiv div{
+        padding: 0;
+        display: table-row;
+        /* width: 50px; */
+    }
+    .fourContainersDiv>div>section{
+        display: unset;
+        width: 100%;
+        margin: 1rem;
+        text-align: center;
+    }
+    .fourContainersDiv section h3, .fourContainersDiv>div>section>a{
+        font-size: calc(100%/1.5);
+    }
+    .typewritertext {
+        opacity: 1;
+        animation: unset;
+    }
+    .homeherobuttonscontainer div a:last-of-type {
+        background-color: #cbcbcb;
     }
 }

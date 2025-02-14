@@ -49,7 +49,7 @@ document.getElementById('sideMenu').addEventListener('click', () => {
         const serviceList = document.createElement('li');
         const serviceLinks = document.createElement('a');
         serviceLinks.textContent = service;
-        serviceLinks.setAttribute('href', '#');
+        serviceLinks.setAttribute('href', "tel:+2349136196176");
         serviceLinks.setAttribute('class', 'serviceNames');
     
         serviceList.appendChild(serviceLinks);
@@ -111,7 +111,7 @@ document.querySelector(".recent").addEventListener('click', () => {
         let recentServices = JSON.parse(localStorage.getItem('services'));
         recentServices.forEach((service) => {
             const recentList = document.createElement('li');
-            recentList.innerHTML = service;
+            recentList.innerHTML = `<a href="tel:+2349136196176">${service}</a>`;
             recentList.setAttribute('class', 'recentServices');
             recentUl.appendChild(recentList);
             document.querySelector('.recentContainer section').append(recentUl);
@@ -125,6 +125,14 @@ document.querySelector(".recent").addEventListener('click', () => {
         document.querySelector('.justrecent').style.display = "";
     });
 });
-// Apply styles to all elements
+document.querySelectorAll('.populate a').forEach((a) => {
+    a.setAttribute('href', 'tel:+2349136196176');
+})
 
+document.querySelectorAll(".anticipate a").forEach((a) => { 
+    a.style.cursor = 'pointer';
+    a.addEventListener('click', () => {
+        alert('This Page is currently under maintanence. Please check back later or Contact Support.')
+    })
+});
 export default services;

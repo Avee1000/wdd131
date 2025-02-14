@@ -1322,8 +1322,8 @@ footer{
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        height: 90svh;
-        margin: 0; padding: min(5rem, 30px);
+        height: 100svh;
+        margin: 0; padding: 5rem min(5rem, 30px) min(5rem, 30px) min(5rem, 30px) ;
     }
     .homeherobuttonscontainer {
         grid-row: 4/6;
@@ -1511,8 +1511,9 @@ footer{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding-top: 5rem;
         gap: 90px;
-        height: 90svh;
+        height: 100svh;
     }
     #hero-box section:first-of-type {
 
@@ -1523,7 +1524,6 @@ footer{
         font-size: clamp(4em, 4em, 2em);
         color: white;
         text-align: center;
-        margin: 0;
         padding: 0 2rem;
     }
     .span1 {

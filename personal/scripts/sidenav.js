@@ -40,7 +40,7 @@ const comingSoon = document.getElementById('comingSoonUnorderedList');
 
 
 document.getElementById('sideMenu').addEventListener('click', () => {
-    mySidenav.style.width = '370px';
+    mySidenav.style.left = '0';
     document.body.style.overflowY = "hidden";
     document.querySelector('.just').style.display = "block";
     document.querySelector('.close').style.display = "flex";
@@ -70,12 +70,12 @@ document.getElementById('sideMenu').addEventListener('click', () => {
 });
 
 document.querySelector('.close').addEventListener('click', () => {
-    mySidenav.style.width = '';
+    mySidenav.style.left = '';
     document.body.style.overflowY = "";
     document.querySelector('.just').style.display = "";
     document.querySelector('.close').style.display = "";
-    serviceUnorderedList.innerHTML = '';
-    comingSoon.innerHTML = '';
+    //serviceUnorderedList.innerHTML = '';
+  //  comingSoon.innerHTML = '';
 
 });
 

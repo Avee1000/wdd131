@@ -44,7 +44,7 @@
 
 
 :root{
-    --headerColor: #212A31;
+    --headerColor: #192025;
     --mainColor: #D3D9D4;
     --text-color: "black";
     --required-color: rgb(166, 7, 7);
@@ -88,12 +88,9 @@ header {
 .header-box{
     display: flex;
     align-items: center;
-}
-
-#logo_link1{
-    background-color: #212A31;
-    position: relative;
-    width: 100px; height: 100%;
+    justify-content: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.605);
+    height: 100px;
 }
 .logo1 {
     width: 100%;  /* Adjust width, height auto-scales */
@@ -159,7 +156,7 @@ header {
 
 li.recent a {
     font-size:  13px;
-    color: #e98717;
+    color: #fba33f;
 }
 
 li.recent a:hover {
@@ -488,6 +485,27 @@ main {
 
 .homeherobuttonscontainer div a:first-of-type:hover{
     background-color: #e98717b8;
+}
+
+#howitworkscontainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.howitworks{
+    flex: 1 1 40%;
+}
+
+.typewriter {
+    position: relative;
+    background-color: black;
+    color: #D3D9D4;
+    min-height: 600px;
+    flex: 1 1 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
 }
 
 
@@ -1061,82 +1079,81 @@ input[type="checkbox"] {
 
 /*-------------------------------------------------------------------------------------------------------*/
 
-footer{
+/* footer{
+    background-color: var(--headerColor);
+} */
+.firstfooterwrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: #2E3944;
+}
+.footer-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.185);
+    height: 100px;
+}
+.logo1 {
+    width: 100%;  
+    height: auto;
+  }
+.fourContainersDiv {
+    display: table;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+.fourContainersDiv div {
+    display: table-cell;
+    padding: 20px;
+    vertical-align: top; 
+    min-width: 200px; 
+    color: white;
+}
+.fourContainersDiv section h3 {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-family: roboto;
+    font-weight: 500;
+}
+.fourContainersDiv>div>section a {
+    color: rgb(209, 208, 208);
+    font-size: .8rem;
+    font-family: roboto;
+    font-weight: 300;
+    display: block;
+    margin-bottom: 8px;
+    text-decoration: none;
+}
+.fourContainersDiv>div>section a:hover {
+    color: #ff9822;
+}
+.secondfooterwrappercontainer {
     background-color: var(--headerColor);
 }
-
-#diagonal-back{
-    height: 600px;
-    width: 80%;
-    display: grid;
-    place-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 2fr 2fr;
-	padding: 30px;
-    margin: auto;
+.secondfooterwrapper {
+    max-width: 1000px;
+    margin: 0 auto;
 }
-
-#logo-link2{
-    justify-self: left;
-}
-
-.logo2{
-    background-color: white;
-    position: relative;
-    border-radius: 50%;
-    width: 80px; height: 80px;
-}
-
-.links-container{
-    width: 100%;
+.firstrowlink{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
 }
-
-.links-container a{
-    font-family: 'roboto';
-    color: white;
-    text-decoration: none;
+.footer-links {
     font-size: 14px;
 }
 
-.information-container{
-    width: 100%;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.information-container article{
-    font-family: 'roboto';
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.information-container article i{
-    font-size: 19px;
-}
-
-.information-container article h5, .information-container h2{
-    font-size: 14px;
-    font-weight: 400;
-}
 
 #social-container{
     grid-row: 2/3;
     grid-column: 1/4;
-    width: 100%;
+    max-width: 1000px;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: auto;
-    border-top: 1px solid #999;
+    margin: 0 auto;
 }
 
 .copyright p{

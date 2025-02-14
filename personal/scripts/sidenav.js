@@ -102,12 +102,12 @@ document.querySelector(".recent").addEventListener('click', () => {
         recentsh2.innerHTML = 'No services selected yet!';
         recentsh2.style.fontSize = "25px";
         recentsh2.style.fontWeight = "400";
-
     } else {
         if (recentUl) {
             recentUl.innerHTML = '';
         }
         recentsh2.innerHTML = 'Your Recents';
+        recentsh2.style.fontWeight = "500";
         let recentServices = JSON.parse(localStorage.getItem('services'));
         recentServices.forEach((service) => {
             const recentList = document.createElement('li');

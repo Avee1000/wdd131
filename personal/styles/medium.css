@@ -18,20 +18,45 @@
 
     .navigation a{
         padding: 8px 12px;
-        font-size: 15px;
+        font-size: 14px;
     }
-
+    li.recent a {
+        font-size: 12px;
+    }
     .navigation li{
         display: block;
     }
-
-
+    #home-hero-box section:first-of-type {
+        padding-left: 3rem;
+    }
+    .homeherobuttonscontainer div {
+        height: 250px;
+    }
      .othercontactoptions {
         flex-direction: column;
         gap: 50px;
     }
     .othercontactoptions section {
         width: 350px;
+    }
+    .whatweoffer {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        margin: 0 2rem;
+    }
+    #hero-box {
+        height: 90svh;
+    }
+    .herobuttons a {
+        padding: min(4em, 20px);
+        margin: 0;
+        width: calc(120% /3);
+        height: calc(100%/5);
+        min-width: 48px;
+        min-height: 48px;
+        text-align: center;
+        font-size: clamp(13px, 12px, 14px);
     }
 
 }
@@ -128,7 +153,7 @@
         margin: 5rem 0 3rem 0;
     }
     
-    .othercontactoptions section{
+    .contactform{
         display: flex;
         flex-direction: column;
         justify-content: space-around;

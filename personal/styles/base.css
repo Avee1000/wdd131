@@ -755,7 +755,7 @@ main {
     margin: 5rem 0 3rem 0;
 }
 
-.othercontactoptions section{
+.contactform {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -811,8 +811,34 @@ main {
     color: white;
     font-size: 40px;
 }
+/* .typewriter p {
+    display: inline-block;
+    overflow: hidden; 
+    white-space: nowrap;
+    border-right: 3px solid black; 
+    font-size: 24px;
+    font-family: monospace;
+    width: 0;
+    padding: 0;
+    animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
+}
 
-.hubberherocontent3 section {
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: auto;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+} */
+
+.hubberherocontent3 div {
     width: 50%;
 }
 
@@ -821,7 +847,6 @@ main {
     font-size: 20px;
     font-weight: 100;
 }
-
 .hubberherocontent3 strong {
     background-color: #e98717;
     padding: 5px;
@@ -1279,21 +1304,26 @@ footer{
     }
 
     #home-hero-box {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 200px 1fr 1fr 100px 100px ;
+        /* grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 200px 1fr 1fr 100px 100px ; */
+        display: block;
     }
     #home-hero-box section h2{
         text-align: center;
+        font-size: clamp(4em, 4em, 2em);
     }
     span.homespan1{
-        margin-top: 1rem;
+        margin-top: 2rem;
         display: block;
         text-align: center;
     }
     #home-hero-box section:first-of-type {
-        grid-column: 1/4;
-        grid-row: 2/4;
-        padding: 2.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 90svh;
+        margin: 0; padding: min(5rem, 30px);
     }
     .homeherobuttonscontainer {
         grid-row: 4/6;
@@ -1478,16 +1508,19 @@ footer{
         display: block;
     }
     #hero-box {
-        grid-template-rows: 1fr 1fr  1fr 70px 1fr 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 90px;
+        height: 90svh;
     }
     #hero-box section:first-of-type {
-        grid-column: 1/6;
-        grid-row: 2/4;
-        height: 100%;
+
         padding: 0;
+        height: auto;
     }
     #hero-box section h2 {
-        font-size: 60px;
+        font-size: clamp(4em, 4em, 2em);
         color: white;
         text-align: center;
         margin: 0;
@@ -1508,8 +1541,6 @@ footer{
         display: flex;
         flex-direction: column;
         align-items: center;
-        grid-column: 1/6;
-        grid-row: 5/6;
         gap: 20px;
     }
     .herobuttons a {
@@ -1518,8 +1549,10 @@ footer{
         margin: 0;
         width: calc(120% /4);
         height: calc(100%/5);
+        min-width: 48px;
+        min-height: 48px;
         text-align: center;
-        font-size: clamp(9px, 12px, 18px);
+        font-size: clamp(10px, 12px, 14px);
     }
     .herobuttons a:last-of-type {
         margin: 0;
@@ -1528,8 +1561,70 @@ footer{
         flex-direction: column;
         gap: 50px;
     }
-    .othercontactoptions section {
+    .contactform {
         width: 350px;
     }
-    
+
+    #hubberherobox {
+        padding: min(5em, 30px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        height: 90svh;
+    }
+    .hubberherocontent1 h2 {
+        font-size: clamp(4em, 3.5rem, 2em);
+        color: white;
+        text-align: center;
+        margin: 0;
+    }
+    .hubberherocontent2 h3 {
+        font-size: clamp(2em, 2em, 1em);
+        text-align: center;
+        margin: 0;
+    }
+    .hubberherocontent3 p {
+        font-size: 1em;
+        text-align: center;
+        margin: 0;
+    }
+    .hubberherocontent3 div {
+        width: 90%;
+        margin: 0 auto;
+    }
+    #whyjoincontainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+    .whyjoin1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        width: 100%;
+    }
+    .whyjoin1 h2 {
+        font-size: 5rem;
+    }
+    .whyjoin2 {
+        display: block;
+    }
+    .whyjoin2>ul>li {
+        font-size: 1rem;
+    }
+    #regform {
+        width: 70svw;
+    }
+    input[type="text"], input[type="tel"], input[type="email"] {
+        width: 100%;
+    }
+    .tab select, .tab textarea {
+        width: 100%;
+    }
 }

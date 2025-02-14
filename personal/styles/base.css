@@ -90,12 +90,15 @@ header {
     align-items: center;
 }
 
-.logo1{
+#logo_link1{
     background-color: #212A31;
     position: relative;
-    width: 100px; height: 120px;
+    width: 100px; height: 100%;
 }
-
+.logo1 {
+    width: 100%;  /* Adjust width, height auto-scales */
+    height: auto;
+  }
 #menu{
     color: white;
     font-size: 1.5rem;
@@ -147,8 +150,22 @@ header {
 }
 
 .navigation:hover > li a:not(:hover){
-    color: white;
     border: 0;
+}
+
+/* .navigation:hover > li a:not(.favorites){
+    color: black;
+} */
+
+li.recent a {
+    font-size:  13px;
+    color: #e98717;
+}
+
+li.recent a:hover {
+    color: #e98717;
+    border-bottom: 2px solid #e98717;
+    cursor: pointer;
 }
 
 .searchContainer {
@@ -195,6 +212,29 @@ header {
     transition: 0.7s;
 }
 
+.justrecent {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color:rgba(0, 0, 0, 0.844);
+    z-index: 1;
+    top: 0;
+    right: 0;
+    transition: 0.5s;
+}
+
+#recentContainer {
+    height: 100%;
+    width: 370px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: -100%;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.7s;
+}
 
 .close{
     display: none;
@@ -229,23 +269,25 @@ header {
 
 }
 
-#serviceUnorderedList{ 
+#serviceUnorderedList, .recentContainer ul{ 
     padding: 0;
     margin: 0;
 }
 
-#serviceUnorderedList h2, #comingSoonUnorderedList h2{
+#serviceUnorderedList span, #comingSoonUnorderedList span, .recentContainer section h2{
     padding: 0 2.5rem;
+    display: block;
     margin: 1.2rem 0 10px 0;
-    font-family: belanosima;
+    font-size: 30px;
+    font-family: roboto;
+    font-weight: 900;
 }
 
 
-#serviceContainer>ul > li{
+#serviceContainer>ul > li {
     display: block;
     color: black;
     font-size: 15px;
-    font-weight: 200;
 }
 
 /* #serviceContainer  h2 {
@@ -254,17 +296,20 @@ header {
     padding: 16px 2.5rem;
 } */
 
-.serviceNames {
+.serviceNames,  .recentContainer ul li {
     display: block;
     text-decoration: none;
     padding: 1.2rem 2.5rem;
     transition: 0.3s;
     color: black;
     transition: 0.4s ease-in-out;
+    font-weight: 200;
+
 }
 
-.serviceNames:hover{
+.serviceNames:hover, .recentContainer ul li:hover {
     background-color: #e98717;
+    cursor: pointer;
 }
 
 #comingSoonUnorderedList{
@@ -932,6 +977,62 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
+#record-main{
+    background-color: var(--mainColor);
+    height: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.recordmsg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    border: 2px solid black;
+    width: 90%;
+    border-radius: 7px;
+    font-family: "Roboto", Georgia, Times, serif;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 1rem;
+}
+
+
+/* =================================================================*/
+#backToTop button{
+    display: block;
+    place-items: center;
+    background-color: #2e3944d9; 
+    height: 50px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 300;
+    text-decoration: none;
+    transition: top 0.3s;
+    color: #ffffff;
+    border: none;
+    font-family: thicccboi;
+}
+
+#backToTop button:hover{
+    background-color: #2e3944d5;
+}
+
+.accordion::after {
+    content: "\25B4";/* Unicode character for "plus" sign (+) */
+    font-size: 18px;
+    color: #F1FAEE;
+    margin-left: 2px;
+}
+
+.accordion:hover{
+    cursor: pointer;
+}
 
 /*-------------------------------------------------------------------------------------------------------*/
 
@@ -1151,10 +1252,13 @@ footer{
         color: white !important;
     }
     
-    .sidenav {
+    .sidenav, #recentContainer {
         max-width: 250px;
     }
 
+    #serviceUnorderedList span, #comingSoonUnorderedList span {
+        font-size: 15px;
+    }
     #serviceContainer>ul > li {
         font-size: 12px;
         font-weight: 200;

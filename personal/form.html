@@ -22,10 +22,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="icon" href="images/favicon.ico">
-    <script type="module" src="scripts/sidenav.js" defer></script>
+    <script type="module" src="scripts/sidenav.js" ></script>
     <script src="scripts/hamburger.js" defer></script>
     <script src="scripts/countries.js" defer></script>
-    <script type="module" src="scripts/forms.js" defer></script>
+    <script type="module" src="scripts/forms.js" ></script>
 
 
 
@@ -45,8 +45,14 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="aboutus.html">About Us</a></li>
                     <li><a href="contacts.html">Contact Us</a></li>
-                    <li><a href="careers.html">Careers</a></li>
+                    <li class="recent"><a>Recents</a></li>
                 </ul>
+                <div class="justrecent"></div>
+                <div id="recentContainer"  class="recentContainer">
+                    <section>
+                        <h2>..</h2>
+                    </section>
+                </div>
 
                 <span class="delete">
                     <i class="fa fa-close"></i>
@@ -54,7 +60,6 @@
             </nav>
             <a id="menu"><i class="fa fa-bars"></i></a>
         </header>
-
 
         <div class="searchContainer">
             <a  id="sideMenu">
@@ -71,12 +76,12 @@
         <div id="mySidenav" class="sidenav">
             <div id="serviceContainer"> 
                 <ul id="serviceUnorderedList">
-                    <h2>Available Services</h2>
+                    <li><span>Available Services</span></li>
                 </ul>
                 <!-- nav elements to be populated in JS -->
 
                 <ul id="comingSoonUnorderedList">                
-                    <h2>Coming soon</h2>
+                    <li><span>Coming soon</span></li>
                 </ul>
             </div>
         </div>
@@ -117,7 +122,7 @@
             </div>
 
             <div id="formscontainer">
-                <form action="" method="get" id="regform">
+                <form action="response.html" method="get" id="regform">
                     <div  class="tab" >
                         <fieldset>
                             <legend>Basic Information</legend>
@@ -129,7 +134,7 @@
 
                             <label>Mobile Phone No.<input type="tel"  id="phone" name="phone" required></label>
 
-                            <label>Business Name <span><i>(Optional)</i></span><input type="text"  id="businessName" name="businessName" required></label>
+                            <label>Business Name <input type="text"  id="businessName" name="businessName" required></label>
                         </fieldset>                                            
                     </div>
 
@@ -156,7 +161,7 @@
                             </label>
                             
                             <label>Service Description
-                                <textarea type="text"  id="description" name="description" cols="20" rows="6" placeholder="Provide a short description of your service(s) " required></textarea>
+                                <textarea id="description" name="description" cols="20" rows="6" placeholder="Provide a short description of your service(s) " required></textarea>
                             </label>
                         </fieldset>                                            
                     </div>

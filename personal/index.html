@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- <link rel="stylesheet" href="css/fontawesome.css"> -->
     <link rel="icon" href="images/favicon.ico">
-    <script type="module" src="scripts/sidenav.js" defer></script>
+    <script type="module" src="scripts/sidenav.js" ></script>
     <script src="scripts/hamburger.js" defer></script>
 
 </head>
@@ -44,7 +44,7 @@
         <header id="contact-header"> 
             <div class="header-box">
                 <a id="logo_link1" href="index.html">
-                    <img class='logo1' src="images/white.webp" alt="ServiceHub Logo" loading="lazy" width="50" height="50">
+                    <img class='logo1' src="images/white.webp" alt="ServiceHub Logo" loading="lazy" width="100" height="120">
                 </a>
                 <!-- <h1>......</h1> -->
             </div>
@@ -54,8 +54,14 @@
                     <li><a href="index.html"  class="active">Home</a></li>
                     <li><a href="aboutus.html">About Us</a></li>
                     <li><a href="contacts.html">Contact Us</a></li>
-                    <li><a href="careers.html">Careers</a></li>
+                    <li class="recent"><a>Recents</a></li>
                 </ul>
+                <div class="justrecent"></div>
+                <div id="recentContainer"  class="recentContainer">
+                    <section>
+                        <h2>..</h2>
+                    </section>
+                </div>
 
                 <span class="delete">
                     <i class="fa fa-close"></i>
@@ -70,7 +76,7 @@
             </a>
             <div id="searchbox" >
                 <input type="search" id="search" name="q" placeholder="Search Services">
-                <button id="search-icon"><i class="fa-solid fa fa-search fa-xl"></i></button>
+                <button  aria-label="button" id="search-icon"><i class="fa-solid fa fa-search fa-xl"></i></button>
             </div>
         </div>        
 
@@ -79,12 +85,12 @@
         <div id="mySidenav" class="sidenav">
             <div id="serviceContainer"> 
                 <ul id="serviceUnorderedList">
-                    <h2>Available Services</h2>
+                    <li><span>Available Services</span></li>
                 </ul>
                 <!-- nav elements to be populated in JS -->
 
                 <ul id="comingSoonUnorderedList">                
-                    <h2>Coming soon</h2>
+                    <li><span>Coming soon</span></li>
                 </ul>
             </div>
         </div>

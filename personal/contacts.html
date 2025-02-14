@@ -15,16 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
-    <!-- <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="css/fontawesome.css">
-    <link rel="stylesheet" href="css/fontawesome.min.css">
-    <link rel="stylesheet" href="css/solid.css">
-    <link rel="stylesheet" href="css/solid.min.css">
-    <link rel="stylesheet" href="css/brands.css">
-    <link rel="stylesheet" href="css/brands.min.css">
-    <link rel="stylesheet" href="css/normalize.css"> -->
-      
+
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/larger.css">
@@ -32,7 +23,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="icon" href="images/favicon.ico">
-    <script type="module" src="scripts/sidenav.js" defer></script>
+    <script type="module" src="scripts/sidenav.js" ></script>
     <script src="scripts/hamburger.js" defer></script>
 
 
@@ -42,7 +33,7 @@
         <header id="contact-header"> 
             <div class="header-box">
                 <a id="logo_link1" href="index.html">
-                    <img class='logo1' src="images/white.webp" alt="ServiceHub Logo" loading="lazy" width="50" height="50">
+                    <img class='logo1' src="images/white.webp" alt="ServiceHub Logo" loading="lazy" width="100" height="200">
                 </a>
                 <!-- <h1>......</h1> -->
             </div>
@@ -52,8 +43,14 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="aboutus.html">About Us</a></li>
                     <li><a href="contacts.html" class="active">Contact Us</a></li>
-                    <li><a href="careers.html">Careers</a></li>
+                    <li class="recent"><a>Recents</a></li>
                 </ul>
+                <div class="justrecent"></div>
+                <div id="recentContainer"  class="recentContainer">
+                    <section>
+                        <h2>..</h2>
+                    </section>
+                </div>
 
                 <span class="delete">
                     <i class="fa fa-close"></i>
@@ -69,7 +66,7 @@
             </a>
             <div id="searchbox" >
                 <input type="search" id="search" name="q" placeholder="Search Services">
-                <button id="search-icon"><i class="fa-solid fa fa-search fa-xl"></i></button>
+                <button  aria-label="button" id="search-icon"><i class="fa-solid fa fa-search fa-xl"></i></button>
             </div>
         </div>    
 
@@ -78,19 +75,18 @@
         <div id="mySidenav" class="sidenav">
             <div id="serviceContainer"> 
                 <ul id="serviceUnorderedList">
-                    <h2>Available Services</h2>
+                    <li><span>Available Services</span></li>
                 </ul>
                 <!-- nav elements to be populated in JS -->
 
                 <ul id="comingSoonUnorderedList">                
-                    <h2>Coming soon</h2>
+                    <li><span>Coming soon</span></li>
                 </ul>
             </div>
         </div>
         <span class="close">
             <i class="fa-solid fa-close"></i>
         </span>
-        
         
         <main id="contacts-main">
           <div id="hero-box">

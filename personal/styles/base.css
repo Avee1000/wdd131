@@ -1322,7 +1322,7 @@ footer{
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        height: 100svh;
+        min-height: 100svh;
         margin: 0; padding: 5rem min(5rem, 30px) min(5rem, 30px) min(5rem, 30px) ;
     }
     .homeherobuttonscontainer {
@@ -1513,7 +1513,7 @@ footer{
         justify-content: center;
         padding-top: 5rem;
         gap: 90px;
-        height: 100svh;
+        min-height: 100svh;
     }
     #hero-box section:first-of-type {
 
@@ -1572,7 +1572,7 @@ footer{
         justify-content: center;
         align-items: center;
         gap: 30px;
-        height: 90svh;
+        min-height: 90svh;
     }
     .hubberherocontent1 h2 {
         font-size: clamp(4em, 3.5rem, 2em);

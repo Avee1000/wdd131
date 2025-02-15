@@ -39,43 +39,45 @@ const comingSoon = document.getElementById('comingSoonUnorderedList');
 
 
 
-[document.querySelector('.find'), document.getElementById('sideMenu')].addEventListener('click', () => {
-    mySidenav.style.left = '0';
-    document.body.style.overflowY = "hidden";
-    document.querySelector('.just').style.display = "block";
-    document.querySelector('.close').style.display = "flex";
+[document.querySelector('.find'), document.getElementById('sideMenu')].forEach((item)) => {
+    item.addEventListener('click', () => {
+        mySidenav.style.left = '0';
+        document.body.style.overflowY = "hidden";
+        document.querySelector('.just').style.display = "block";
+        document.querySelector('.close').style.display = "flex";
+    
+        services.available.forEach((service) => {
+            const serviceList = document.createElement('li');
+            const serviceLinks = document.createElement('a');
+            serviceLinks.textContent = service;
+            serviceLinks.setAttribute('href', "tel:+2349136196176");
+            serviceLinks.setAttribute('class', 'serviceNames');
+    
+            serviceList.appendChild(serviceLinks);
+            serviceUnorderedList.appendChild(serviceList);
+            document.getElementById('serviceContainer').append(serviceUnorderedList);
+        });
+        
+        services.comingSoon.forEach((service) => {
+            const comingSoonList = document.createElement('li');
+            // const comingSoonLinks = document.createElement('a');
+            comingSoonList.textContent = service;
+            comingSoonList.setAttribute('class', 'serviceNames');
+        
+            comingSoon.appendChild(comingSoonList);
+            document.getElementById('serviceContainer').append(comingSoon);
+        });
 
-    services.available.forEach((service) => {
-        const serviceList = document.createElement('li');
-        const serviceLinks = document.createElement('a');
-        serviceLinks.textContent = service;
-        serviceLinks.setAttribute('href', "tel:+2349136196176");
-        serviceLinks.setAttribute('class', 'serviceNames');
-    
-        serviceList.appendChild(serviceLinks);
-        serviceUnorderedList.appendChild(serviceList);
-        document.getElementById('serviceContainer').append(serviceUnorderedList);
-    });
-    
-    services.comingSoon.forEach((service) => {
-        const comingSoonList = document.createElement('li');
-        // const comingSoonLinks = document.createElement('a');
-        comingSoonList.textContent = service;
-        comingSoonList.setAttribute('class', 'serviceNames');
-    
-        comingSoon.appendChild(comingSoonList);
-        document.getElementById('serviceContainer').append(comingSoon);
-    });
-
-    document.querySelectorAll('.serviceNames').forEach((service) => { 
-        service.addEventListener('click', (e) => {
-            let storedServices = JSON.parse(localStorage.getItem('services')) || [];
-            if (!storedServices.includes(e.target.textContent)) {
-                storedServices.push(e.target.textContent);
-            }
-            localStorage.setItem('services', JSON.stringify(storedServices));
-        })
-    });
+        document.querySelectorAll('.serviceNames').forEach((service) => { 
+            service.addEventListener('click', (e) => {
+                let storedServices = JSON.parse(localStorage.getItem('services')) || [];
+                if (!storedServices.includes(e.target.textContent)) {
+                    storedServices.push(e.target.textContent);
+                }
+                localStorage.setItem('services', JSON.stringify(storedServices));
+            })
+        });
+    });    
 
 });
 

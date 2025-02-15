@@ -100,11 +100,12 @@ header#logo_link1 {
     justify-content: center;
     height: 100px;
 }
+#logo_link1 {
+    display: block;
+    width: 100px; /* Match image width */
+    height: 120px; /* Match image height */
+}
 
-.logo1 {
-    width: 100%;  /* Adjust width, height auto-scales */
-    height: auto;
-  }
 
 #menu{
     color: white;
@@ -534,11 +535,11 @@ main {
 
 .typewritertext {
     font-size: clamp(12px, 5vw, 50px);
-    opacity: 0;
+    opacity: 1;
     padding: min(5em, 20px);
 }
 
-.t1 {
+/* .t1 {
     animation: show 4s ease-in-out 0s infinite alternate;
 }
 
@@ -551,9 +552,9 @@ main {
 }
 
 @keyframes show {
-    0% { opacity: 1; }  /* Fully visible */
-    100% { opacity: 0; } /* Fully invisible */
-}
+    0% { opacity: 1; } 
+    100% { opacity: 0; } 
+} */
 
 
 

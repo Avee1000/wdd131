@@ -1,5 +1,4 @@
-@media screen and (min-width: 1500px){
-
+@media screen and (width >= 1500px){
     #menu, span.delete{
         display: none;
     }
@@ -26,6 +25,7 @@
     #home-hero-box section:first-of-type {
         grid-column: 2/6;
         grid-row: 2/5;
+
         /* padding: 6rem 4rem 0 1rem; */
  
     }
@@ -147,7 +147,6 @@
     #hero-box section h2 {
         font-size: 110px;
         color: white;
-        text-align: center;
         margin: 0;
         padding: 0;
         text-align: left;
@@ -163,7 +162,6 @@
     }
     
     #hubberherobox {
-        padding: unset;
         height: 500px;
         justify-content: flex-end;
         padding: 0 0 2rem 5rem;

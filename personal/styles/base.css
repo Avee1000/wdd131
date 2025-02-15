@@ -1796,7 +1796,7 @@ input[type="checkbox"] {
         animation: unset;
     }
 
-    .homeherobuttonscontainer div a:last-of-type {
+/*     .homeherobuttonscontainer div a:hover {
         background-color: #cbcbcb;
-    }
+    } */
 }

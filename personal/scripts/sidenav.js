@@ -68,6 +68,13 @@ document.querySelectorAll('.find, #sideMenu').forEach((item) => {
             document.getElementById('serviceContainer').append(comingSoon);
         });
 
+        document.querySelector(".just").addEventListener('click', () => { 
+        mySidenav.style.left = '';
+        document.body.style.overflowY = "";
+        document.querySelector('.just').style.display = "";
+        document.querySelector('.close').style.display = "";
+        });
+
         document.querySelectorAll('.serviceNames').forEach((service) => { 
             service.addEventListener('click', (e) => {
                 let storedServices = JSON.parse(localStorage.getItem('services')) || [];

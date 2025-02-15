@@ -594,8 +594,14 @@ main {
 #statements {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 30px;
     width: 80%;
+    max-width: 1700px;
     margin: 0 auto;
+}
+
+.photos {
+    background-color: #124E66;
 }
 
 .writings article {

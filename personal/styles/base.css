@@ -601,12 +601,12 @@ main {
     text-align: left;
     margin: 1rem 0 18rem;
     color: #212A31;
-    transform: scale(1);
+    /* transform: scale(1);
     opacity: 1;
     animation: fade-in linear forwards;
     animation-timeline: view();
-    animation-range: 70% ;
-}
+    animation-range: 70% ;*/
+} 
 
 .writings article h3 {
     font-size: 25px;
@@ -622,10 +622,9 @@ main {
     line-height: 150%;
 }
 
-@keyframes fade-in {
-    /* from {scale: .8; opacity: 0;} */
+/* @keyframes fade-in {
     to {transform: scale(0.5); opacity: .3;}
-}
+} */
 
 .redtick {
     border-left: 10px solid #124e66;

@@ -45,43 +45,42 @@ document.querySelectorAll('.find, #sideMenu').forEach((item) => {
         document.body.style.overflowY = "hidden";
         document.querySelector('.just').style.display = "block";
         document.querySelector('.close').style.display = "flex";
-
-        // Create and append available services
-        const serviceUnorderedList = document.createElement('ul'); // Create a new list each time
+    
         services.available.forEach((service) => {
             const serviceList = document.createElement('li');
             const serviceLinks = document.createElement('a');
             serviceLinks.textContent = service;
             serviceLinks.setAttribute('href', "tel:+2349136196176");
             serviceLinks.setAttribute('class', 'serviceNames');
-
+    
             serviceList.appendChild(serviceLinks);
             serviceUnorderedList.appendChild(serviceList);
+            document.getElementById('serviceContainer').append(serviceUnorderedList);
         });
-        document.getElementById('serviceContainer').appendChild(serviceUnorderedList);
-
-        // Create and append coming soon services
-        const comingSoonList = document.createElement('ul'); // Create a new list for "Coming Soon"
+        
         services.comingSoon.forEach((service) => {
-            const comingSoonItem = document.createElement('li');
-            comingSoonItem.textContent = service;
-            comingSoonItem.setAttribute('class', 'serviceNames');
-            comingSoonList.appendChild(comingSoonItem);
+            const comingSoonList = document.createElement('li');
+            // const comingSoonLinks = document.createElement('a');
+            comingSoonList.textContent = service;
+            comingSoonList.setAttribute('class', 'serviceNames');
+        
+            comingSoon.appendChild(comingSoonList);
+            document.getElementById('serviceContainer').append(comingSoon);
         });
-        document.getElementById('serviceContainer').appendChild(comingSoonList);
 
-        // Store selected services in localStorage
-        document.querySelectorAll('.serviceNames').forEach((service) => {
+        document.querySelectorAll('.serviceNames').forEach((service) => { 
             service.addEventListener('click', (e) => {
                 let storedServices = JSON.parse(localStorage.getItem('services')) || [];
                 if (!storedServices.includes(e.target.textContent)) {
                     storedServices.push(e.target.textContent);
                 }
                 localStorage.setItem('services', JSON.stringify(storedServices));
-            });
+            })
         });
-    });
+    });    
+
 });
+
 
 
 document.querySelector('.close').addEventListener('click', () => {

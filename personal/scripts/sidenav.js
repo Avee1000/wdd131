@@ -95,10 +95,8 @@ document.querySelector('.close').addEventListener('click', () => {
     document.body.style.overflowY = "";
     document.querySelector('.just').style.display = "";
     document.querySelector('.close').style.display = "";
-    //serviceUnorderedList.innerHTML = '';
-    //  comingSoon.innerHTML = '';
-    
-    
+    serviceUnorderedList.innerHTML = `<li><span>Available Services</span></li>`;
+    comingSoon.innerHTML = `<li><span>Coming Soon</span></li>`;
 });
 
 const recentsh2 = document.querySelector('.recentContainer section h2');

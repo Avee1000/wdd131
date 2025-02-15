@@ -39,7 +39,7 @@ const comingSoon = document.getElementById('comingSoonUnorderedList');
 
 
 
-[document.querySelector('.find'), document.getElementById('sideMenu')].forEach((item)) => {
+[document.querySelector('.find'), document.getElementById('sideMenu')].forEach((item) => {
     item.addEventListener('click', () => {
         mySidenav.style.left = '0';
         document.body.style.overflowY = "hidden";

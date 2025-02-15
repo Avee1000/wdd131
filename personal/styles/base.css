@@ -463,13 +463,13 @@ main {
     align-items: center;
 }
 
-.homeherobuttonscontainer div a{
+.homeherobuttonscontainer div a, .find{
     text-align: center;
     text-decoration: none;
     margin: 12px 0;
 }
 
-.homeherobuttonscontainer div a:last-of-type{
+.homeherobuttonscontainer div a{
     background-color: #748d9295;
     width: 200px;
     padding: 16px 0;
@@ -479,12 +479,12 @@ main {
 
 }
 
-.homeherobuttonscontainer div a:last-of-type:hover {
+.homeherobuttonscontainer div a:hover {
     background-color: #212a318f;
 }
 
 
-.homeherobuttonscontainer div a:first-of-type {
+.homeherobuttonscontainer div span {
     background-color: #e98717ed;
     color: black;
     width: 200px;
@@ -493,7 +493,7 @@ main {
     transition: 0.5s ease-in-out;
 }
 
-.homeherobuttonscontainer div a:first-of-type:hover{
+.homeherobuttonscontainer div span:hover{
     background-color: #e98717b8;
 }
 

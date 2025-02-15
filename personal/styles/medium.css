@@ -53,8 +53,9 @@
     }
 
     #hero-box {
-        min-height: 90svh;
+        max-height: 1000px;
     }
+
 
     .herobuttons a {
         padding: min(4em, 20px);

@@ -134,7 +134,7 @@ header#logo_link1 {
     padding: 0;
 }
 
-.navigation a{
+.navigation a, .recent span{
     padding: 11px 15px;
     text-decoration: none;
     font-size: 18px;
@@ -164,12 +164,12 @@ header#logo_link1 {
     color: black;
 } */
 
-li.recent a {
+li.recent span {
     font-size:  13px;
     color: #fba33f;
 }
 
-li.recent a:hover {
+li.recent span:hover {
     color: #e98717;
     border-bottom: 2px solid #e98717;
     cursor: pointer;
@@ -273,9 +273,6 @@ li.recent a:hover {
     padding: 10px 13px;
     font-size: 30px;
     color: white;
-
-    /* vertical-align: middle; */
-
 }
 
 #serviceUnorderedList, .recentContainer ul{ 
@@ -813,10 +810,10 @@ main {
     color: #2e3944;
 }
  
-.talktorealpeople h6 {
+/* .talktorealpeople h6 {
     color: #212a31c7;
     text-align: center;
-}
+} */
 
 .othercontactoptions {
     display: flex;
@@ -824,7 +821,7 @@ main {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    margin: 5rem 0 3rem;
+    margin: 5rem 0;
 }
 
 .contactform {
@@ -1162,7 +1159,7 @@ input[type="checkbox"] {
     font-weight: 500;
 }
 
-.fourContainersDiv>div>section a {
+.fourContainersDiv>div>section a, .fourContainersDiv>div>section span {
     color: rgb(209 208 208);
     font-size: .8rem;
     font-family: roboto;
@@ -1172,7 +1169,7 @@ input[type="checkbox"] {
     text-decoration: none;
 }
 
-.fourContainersDiv>div>section a:hover {
+.fourContainersDiv>div>section a:hover, .fourContainersDiv>div>section span:hover {
     color: #ff9822;
 }
 
@@ -1252,6 +1249,7 @@ input[type="checkbox"] {
         width: 50px;     line-height: 50px;    height: 50px; 
         border-radius: 50%;
         background-color: white;
+        color: #212A31;
         text-align: center;
         transition: all .4s ease-in-out;
         animation: switch 2s infinite;
@@ -1381,8 +1379,6 @@ input[type="checkbox"] {
     }
 
     #home-hero-box {
-        /* grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 200px 1fr 1fr 100px 100px ; */
         display: block;
         padding: 2rem 0 0
     }
@@ -1610,9 +1606,9 @@ input[type="checkbox"] {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-top: 5rem;
-        gap: 90px;
-        min-height: 100svh;
+        padding-top: 3rem;
+        gap: 40px;
+        min-height: 900px;
     }
 
     #hero-box section:first-of-type {
@@ -1674,17 +1670,17 @@ input[type="checkbox"] {
     }
 
     #hubberherobox {
-        padding: min(5em, 30px);
+        padding: 8rem min(100vw, 30px);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 30px;
-        min-height: 90svh;
+        min-height: 900px;
     }
 
     .hubberherocontent1 h2 {
-        font-size: clamp(4em, 3.5rem, 2em);
+        font-size: clamp(3.5rem, 2.5vw, 4.5rem);
         color: white;
         text-align: center;
         margin: 0;
@@ -1725,7 +1721,7 @@ input[type="checkbox"] {
     }
 
     .whyjoin1 h2 {
-        font-size: 5rem;
+        font-size: clamp(3.5rem, 2.5vw, 4.5rem);
     }
 
     .whyjoin2 {
@@ -1747,6 +1743,9 @@ input[type="checkbox"] {
     .tab select, .tab textarea {
         width: 100%;
     }
+    input[type="submit"] {
+        font-size: .5em;
+    }
 
     .fourContainersDiv{
         display: flex;
@@ -1755,19 +1754,16 @@ input[type="checkbox"] {
 
     .fourContainersDiv div{
         padding: 0;
-        display: table-row;
-
-        /* width: 50px; */
+        vertical-align: unset; 
     }
 
     .fourContainersDiv>div>section{
         display: unset;
-        width: 100%;
         margin: 1rem;
         text-align: center;
     }
 
-    .fourContainersDiv section h3, .fourContainersDiv>div>section>a{
+    .fourContainersDiv section h3, .fourContainersDiv>div>section>a, .fourContainersDiv>div>section span{
         font-size: calc(100%/1.5);
     }
 

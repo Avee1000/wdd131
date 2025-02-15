@@ -129,7 +129,7 @@ document.querySelectorAll('.populate a').forEach((a) => {
     a.setAttribute('href', 'tel:+2349136196176');
 })
 
-document.querySelectorAll(".anticipate a").forEach((a) => { 
+document.querySelectorAll(".anticipate a, .anticipate span").forEach((a) => { 
     a.style.cursor = 'pointer';
     a.addEventListener('click', () => {
         alert('This Page is currently under maintanence. Please check back later or Contact Support.')

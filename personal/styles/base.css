@@ -578,7 +578,7 @@ main {
     width: 100%;
     text-align: center;
     color: #212A31;
-    margin: 3rem 0 8rem;
+    margin: 3rem 0;
 }
 
 .meet h2 {
@@ -594,16 +594,11 @@ main {
 #statements {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 100px;
     width: 80%;
     max-width: 1700px;
-    margin: 0 auto;
+    margin: 3rem auto;
 }
-
-.photos {
-    background-color: #124E66;
-}
-
 .writings article {
     text-align: left;
     margin: 1rem 0 18rem;
@@ -615,16 +610,15 @@ main {
     animation-range: 70% ;*/
 } 
 
-.writings article h3 {
+.writings article h3, .ourVision h3 {
     font-size: 25px;
 }
 
-.writings article div {
+.writings article div, .ourVision div {
     display: flex;
     margin: 0 0 1rem;
 }
-
-.writings article p {
+.writings article p, .ourVision p {
     font-weight: 350;
     line-height: 150%;
 }
@@ -649,6 +643,29 @@ main {
     border-left: 10px solid #D3D9D4;
     border-radius: 15px;
     margin-right: 1rem;
+}
+
+.photosContainer {
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 30px; 
+    height: 100%;
+}
+
+.photosContainer img {
+    width: 400px; 
+    height: 400px; 
+    object-fit: cover; 
+    border-radius: 50%;
+}
+.ourVision {
+    color: #212A31;
+}
+.visiontick {
+    border-right: 10px solid #e98717;
+    border-radius: 15px;
+    margin-left: 1rem;
 }
 
 .servicehub {

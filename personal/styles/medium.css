@@ -73,6 +73,20 @@
     .typewritertext {
         font-size: 30px;
     }
+    .photos {
+        display: none;
+    }
+
+    #statements {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .writings article {
+        margin: 4rem 0 10rem;
+        ;
+    }
+    
 
     .container {
         display: grid;

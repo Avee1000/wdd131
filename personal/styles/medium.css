@@ -74,7 +74,21 @@
         font-size: 30px;
     }
     .photos {
-        display: none;
+        margin-bottom: 10rem;
+    }
+    .photos, .photosContainer {
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+    }
+    .ourVision div{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: start;
+    }
+    .visiontick {
+        margin: 0;
+        margin-right: 1rem;
     }
 
     #statements {

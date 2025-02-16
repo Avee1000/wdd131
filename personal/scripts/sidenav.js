@@ -45,6 +45,14 @@ document.querySelectorAll('.find, #sideMenu').forEach((item) => {
         document.body.style.overflowY = "hidden";
         document.querySelector('.just').style.display = "block";
         document.querySelector('.close').style.display = "flex";
+
+        while (serviceUnorderedList.children.length > 1) {
+            serviceUnorderedList.removeChild(serviceUnorderedList.lastChild);
+        }
+        while (comingSoonUnorderedList.children.length > 1) {
+            comingSoonUnorderedList.removeChild(comingSoonUnorderedList.lastChild);
+        }
+
     
         services.available.forEach((service) => {
             const serviceList = document.createElement('li');
@@ -95,8 +103,8 @@ document.querySelector('.close').addEventListener('click', () => {
     document.body.style.overflowY = "";
     document.querySelector('.just').style.display = "";
     document.querySelector('.close').style.display = "";
-    serviceUnorderedList.innerHTML = `<li><span>Available Services</span></li>`;
-    comingSoon.innerHTML = `<li><span>Coming Soon</span></li>`;
+    // serviceUnorderedList.innerHTML = `<li><span>Available Services</span></li>`;
+    // comingSoon.innerHTML = `<li><span>Coming Soon</span></li>`;
 });
 
 const recentsh2 = document.querySelector('.recentContainer section h2');
@@ -144,4 +152,11 @@ document.querySelectorAll(".anticipate a, .anticipate span").forEach((a) => {
         alert('This Page is currently under maintanence. Please check back later or Contact Support.')
     })
 });
+
+const lastModifiedContainer = document.createElement('p'),
+    lastModified = new Date(document.lastModified);
+
+lastModifiedContainer.innerHTML = `<strong>Last Modified: </strong>${lastModified}`;
+document.querySelector('.copyright').append(lastModifiedContainer);
+
 export default services;

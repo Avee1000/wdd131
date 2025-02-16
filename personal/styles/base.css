@@ -102,8 +102,8 @@ header#logo_link1 {
 }
 #logo_link1 {
     display: block;
-    width: 100px; /* Match image width */
-    height: 120px; /* Match image height */
+    width: 100px; 
+    height: 120px; 
 }
 
 
@@ -1794,6 +1794,32 @@ input[type="checkbox"] {
     .typewritertext {
         opacity: 1;
         animation: unset;
+    }
+    .photos {
+        margin-bottom: 10rem;
+    }
+    .photos, .photosContainer {
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+    }
+    .photosContainer img {
+        width: 250px; 
+        height: 250px;
+        object-fit: cover; 
+        border-radius: 50%;
+    }
+    .ourVision div{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: start;
+    }
+    .visiontick {
+        margin: 0;
+        margin-right: 1rem;
+    }
+    input[type="search"]:hover, input[type="search"]:focus{
+        width: 220px;
     }
 
 /*     .homeherobuttonscontainer div a:hover {
